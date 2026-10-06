@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة النواة للتعليم الخاص | Al-Nawat Special Education School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        sky: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(245, 158, 11, 0.06) 50%, rgba(14, 165, 233, 0.08) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(20, 184, 166, 0.15);
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-teal-800 text-white text-xs sm:text-sm py-2 px-4 text-center flex justify-between items-center max-w-7xl mx-auto rounded-b-xl shadow-inner">
+        <div class="flex items-center gap-4 mx-auto md:mx-0">
+            <span class="flex items-center gap-1.5"><i class="fa-solid me-1 fa-location-dot text-amber-400"></i> <span data-i18n="top_bar_location">زوارة، ليبيا (W3W3+Q33)</span></span>
+            <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid me-1 fa-clock text-amber-400"></i> <span data-i18n="top_bar_hours">الأحد - الخميس: 8:00 ص - 2:00 م</span></span>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+            <a href="tel:+218910000000" class="hover:text-amber-300 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone text-xs"></i> <span dir="ltr">+218 91 000 0000</span></a>
+            <span class="text-teal-600">|</span>
+            <a href="https://wa.me/218910000000" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1"><i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-600 to-teal-400 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-seedling text-2xl text-amber-300"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-extrabold text-lg sm:text-xl text-teal-900 leading-tight" data-i18n="brand_name">مدرسة النواة للتعليم الخاص</h1>
+                        <p class="text-xs text-slate-500 font-medium" data-i18n="brand_subtitle">Al-Nawat Special Education School • Zuwara</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+                    <a href="#about" class="hover:text-teal-600 transition-colors" data-i18n="nav_about">عن المدرسة</a>
+                    <a href="#programs" class="hover:text-teal-600 transition-colors" data-i18n="nav_programs">برامجنا التخصصية</a>
+                    <a href="#calculator" class="hover:text-teal-600 transition-colors" data-i18n="nav_calc">حاسبة الاحتياجات</a>
+                    <a href="#testimonials" class="hover:text-teal-600 transition-colors" data-i18n="nav_reviews">آراء أولياء الأمور</a>
+                    <a href="#contact" class="hover:text-teal-600 transition-colors" data-i18n="nav_contact">التواصل والوقع</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Language Switcher -->
+                    <button id="langToggle" class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-globe text-teal-600"></i>
+                        <span id="langText">English</span>
+                    </button>
+
+                    <!-- CTA Button -->
+                    <a href="#apply" class="hidden sm:inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-amber-500/20 text-sm transition-all hover:scale-105" data-i18n="nav_apply">
+                        تقديم طلب تسجيل
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-600 hover:text-teal-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 hover:text-teal-600 font-semibold" data-i18n="nav_about">عن المدرسة</a>
+            <a href="#programs" class="block py-2 text-slate-700 hover:text-teal-600 font-semibold" data-i18n="nav_programs">برامجنا التخصصية</a>
+            <a href="#calculator" class="block py-2 text-slate-700 hover:text-teal-600 font-semibold" data-i18n="nav_calc">حاسبة الاحتياجات</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 hover:text-teal-600 font-semibold" data-i18n="nav_reviews">آراء أولياء الأمور</a>
+            <a href="#contact" class="block py-2 text-slate-700 hover:text-teal-600 font-semibold" data-i18n="nav_contact">التواصل والموقع</a>
+            <a href="#apply" class="block text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl shadow-sm" data-i18n="nav_apply">
+                تقديم طلب تسجيل
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-gradient py-16 lg:py-24 border-b border-teal-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-start space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100/80 text-teal-800 text-xs sm:text-sm font-bold border border-teal-200 shadow-sm">
+                        <i class="fa-solid fa-heart text-amber-500"></i>
+                        <span data-i18n="hero_badge">بيئة تعليمية وتربوية آمنة ومحفزة للأطفال زوارة</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-slate-900 leading-tight" data-i18n="hero_title">
+                        ننمي قدرات طفلك، لنبني غداً ممتلئاً <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">بالاستقلالية والنجاح</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
+                        في مدرسة النواة للتعليم الخاص زوارة، نقدم برامج فردية متخصصة (IEP) تحت إشراف نخبة من أخصائي التربية الخاصة، التخاطب، العلاج الوظيفي والسلوكي لضمان أفضل نمو وتكامل لطفلك.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#apply" class="flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-teal-600/30 text-base transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span data-i18n="hero_cta_apply">قدم طلب تسجيل الآن</span>
+                        </a>
+                        <a href="#contact" class="flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold px-8 py-4 rounded-2xl border border-slate-200 shadow-sm text-base transition-all hover:border-teal-300">
+                            <i class="fa-solid fa-calendar-check text-amber-500"></i>
+                            <span data-i18n="hero_cta_tour">احجز زيارة للمدرسة</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-start">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-700">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_1">خطط فردية مخصصة</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-700">1:1</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_2">جلسات تخاطب وترميم</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-amber-600"><i class="fa-solid fa-star"></i> 5/5</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_3">ثقة أولياء الأمور</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Illustration / Card Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Card -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 border border-white">
+                            <div class="w-full h-64 sm:h-72 bg-teal-100 rounded-2xl overflow-hidden relative flex items-center justify-center mb-6 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Special Education Classroom" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/0d9488/ffffff?text=Al-Nawat+School'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-teal-900/60 to-transparent"></div>
+                                <div class="absolute bottom-4 start-4 text-white">
+                                    <span class="bg-amber-500 text-xs font-bold px-2.5 py-1 rounded-md mb-1 inline-block" data-i18n="hero_image_badge">رعاية متكاملة</span>
+                                    <h3 class="font-bold text-lg" data-i18n="hero_image_title">فصول تعليمية وتأهيلية تجهيز حديث</h3>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 p-3 bg-teal-50 rounded-xl text-teal-800 text-sm font-semibold">
+                                    <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                                    <span data-i18n="hero_feat_1">تقييم شامل ومجاني في الزيارة الأولى</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-amber-50 rounded-xl text-amber-900 text-sm font-semibold">
+                                    <i class="fa-solid fa-sparkles text-amber-500 text-lg"></i>
+                                    <span data-i18n="hero_feat_2">تكامل المهارات الحياتية والدمج المجتمعي</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Accent Circle -->
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-400/30 rounded-full blur-2xl"></div>
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-teal-400/30 rounded-full blur-2xl"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-teal-600 font-bold text-sm tracking-wide uppercase" data-i18n="about_subtitle">رؤيتنا ورسالتنا</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2" data-i18n="about_title">لماذا تختار مدرسة النواة بزوارة؟</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-teal-200 group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="philosophy_1_title">الخطة التربوية الفردية (IEP)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="philosophy_1_desc">
+                        تصميم خطة تعليمية وتأهيلية لكل طالب بناءً على نقاط قوته واحتياجاته الفردية الدقيقة بمشاركة ولي الأمر.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-teal-200 group">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="philosophy_2_title">فريق متخصص ذو خبرة عالية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="philosophy_2_desc">
+                        كادر تعليمي وتربي حاصل على أعلى الشهادات والتراخيص في مجالات التربية الخاصة، النطق، والعلاج النفسي.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-teal-200 group">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="philosophy_3_title">الدمج والدمج الاجتماعي</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="philosophy_3_desc">
+                        نعمل على تمكين الطالب من التفاعل مع المجتمع وبناء استقلاليته في الحياة اليومية والاعتماد على الذات.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission Banner -->
+            <div class="mt-16 bg-gradient-to-r from-teal-700 to-teal-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+                <div class="space-y-3 text-center md:text-start">
+                    <span class="text-amber-400 font-bold text-sm" data-i18n="mission_badge">رسالة المدرسة</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold" data-i18n="mission_title">"نحن نؤمن أن لكل طفل قدرات كامنة تنتظر فقط البيئة الصالحة للتفتح والازدهار."</h3>
+                    <p class="text-teal-100 text-sm" data-i18n="mission_subtitle">مدرسة النواة بزوارة - بوابتكم نحو مستقبل أفضل وأكثر ثقة لأطفالكم.</p>
+                </div>
+                <a href="#apply" class="whitespace-nowrap bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-2xl transition-all hover:scale-105 shadow-md" data-i18n="mission_cta">
+                    سجل طفلك اليوم
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 sm:py-24 bg-slate-50 border-t border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-teal-600 font-bold text-sm tracking-wide uppercase" data-i18n="prog_subtitle">خدماتنا التعليمية والعلاجية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2" data-i18n="prog_title">برامج متكاملة مصممة لكل احتياج</h2>
+                <p class="text-slate-600 text-sm mt-3" data-i18n="prog_desc">انقر على البرنامج للاطلاع على كافة التفاصيل والخدمات المشمولة</p>
+            </div>
+
+            <!-- Program Selector Tabs -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-8" id="programTabs">
+                <button onclick="switchTab('tab-special')" id="btn-tab-special" class="program-tab active p-4 rounded-2xl bg-teal-600 text-white font-bold text-sm text-center shadow-md transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-shapes text-xl"></i>
+                    <span data-i18n="tab_1">التربية الخاصة</span>
+                </button>
+                <button onclick="switchTab('tab-speech')" id="btn-tab-speech" class="program-tab p-4 rounded-2xl bg-white text-slate-700 hover:bg-teal-50 font-bold text-sm text-center border border-slate-200 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-comments text-xl text-teal-600"></i>
+                    <span data-i18n="tab_2">جلسات النطق واللغة</span>
+                </button>
+                <button onclick="switchTab('tab-behavior')" id="btn-tab-behavior" class="program-tab p-4 rounded-2xl bg-white text-slate-700 hover:bg-teal-50 font-bold text-sm text-center border border-slate-200 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-brain text-xl text-teal-600"></i>
+                    <span data-i18n="tab_3">التعديل السلوكي</span>
+                </button>
+                <button onclick="switchTab('tab-motor')" id="btn-tab-motor" class="program-tab p-4 rounded-2xl bg-white text-slate-700 hover:bg-teal-50 font-bold text-sm text-center border border-slate-200 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-child-reaching text-xl text-teal-600"></i>
+                    <span data-i18n="tab_4">العلاج الوظيفي والحركي</span>
+                </button>
+                <button onclick="switchTab('tab-lifeskills')" id="btn-tab-lifeskills" class="program-tab col-span-2 md:col-span-1 p-4 rounded-2xl bg-white text-slate-700 hover:bg-teal-50 font-bold text-sm text-center border border-slate-200 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-people-group text-xl text-teal-600"></i>
+                    <span data-i18n="tab_5">المهارات الحياتية والدمج</span>
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+                <!-- Tab 1: Special Ed -->
+                <div id="tab-special" class="tab-content grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab1_tag">برنامج أساسي</span>
+                        <h3 class="text-2xl font-bold text-slate-900" data-i18n="tab1_heading">برامج التربية الخاصة الفردية</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="tab1_desc">
+                            نقدم منهاجاً تعليمياً وتأهيلياً مرناً يتناسب مع قدرات الأطفال من ذوي الإعاقة الذهنية وصعوبات التعلم، مع التركيز على التقدم الأكاديمي والمهاري بأساليب تعليمية تفاعلية حديثة.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab1_bullet1">تطوير مهارات القراءة والحساب الأساسية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab1_bullet2">تقنيات التعليم باللعب الوسائط المتعددة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab1_bullet3">تقارير دورية لشرح مدى تقدم الطالب للوالدين</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Special Education" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Tab 2: Speech -->
+                <div id="tab-speech" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab2_tag">علاج متخصص</span>
+                        <h3 class="text-2xl font-bold text-slate-900" data-i18n="tab2_heading">جلسات تخاطب وتقويم النطق</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="tab2_desc">
+                            نساعد الأطفال على تجاوز التأخر اللغوي، التلعثم، ومشاكل النطق وإخارج الحروف، عبر جلسات فردية مركزة وتأهيل أعضاء النطق بأحدث الممارسات.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab2_bullet1">تحسين النطق والحصيلة اللغوية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab2_bullet2">تدريب على التواصل اللفظي والغير لفظي</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab2_bullet3">أدوات وتقنيات تخاطب سمعية وبصرية حديثة</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Speech Therapy" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Tab 3: Behavior -->
+                <div id="tab-behavior" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab3_tag">دعم نفسي وتربوي</span>
+                        <h3 class="text-2xl font-bold text-slate-900" data-i18n="tab3_heading">التعديل السلوكي والدعم النفسي</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="tab3_desc">
+                            برامج خبيرة للتعامل مع سلوكيات فرط الحركة وشديدي التشتت (ADHD) واضطراب طيف التوحد، لتعزيز السلوكيات الإيجابية وتقليل التوتر والعصبية.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab3_bullet1">خطط تعديل سلوك علمية ومدروسة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab3_bullet2">استراتيجيات تعزيز التركيز والانتباه</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab3_bullet3">استشارات وإرشادات دورية لأسرة الطفل</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Behavioral Support" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Tab 4: Motor -->
+                <div id="tab-motor" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab4_tag">تأهيل حركي</span>
+                        <h3 class="text-2xl font-bold text-slate-900" data-i18n="tab4_heading">العلاج الوظيفي والحركي الدقيق</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="tab4_desc">
+                            تطوير المهارات الحركية الدقيقة والكبيرة (مثل مسك القلم، التوازن، والتحكم باليدين) لمساعدة الطفل على الاعتماد على نفسه في أنشطته اليومية.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab4_bullet1">تمارين التناسق الحركي والبصري</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab4_bullet2">تكامل المهارات الحركية الصغرى والكبرى</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab4_bullet3">غرف علاج حركي مجهزة وآمنة</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Occupational Therapy" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Tab 5: Life Skills -->
+                <div id="tab-lifeskills" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab5_tag">اعتماد على الذات</span>
+                        <h3 class="text-2xl font-bold text-slate-900" data-i18n="tab5_heading">المهارات الحياتية والتأهيل للدمج</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="tab5_desc">
+                            تدريب أطفالنا على أنشطة الحياة اليومية العادية كالارتداء، التغذية الذاتية، قواعد السلامة العامة، والمهارات الاجتماعية والتفاعل مع الأقران.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab5_bullet1">أنشطة تفاعلية ورحلات تعليمية خارجية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab5_bullet2">تعزيز الاستقلالية في العناية الذاتية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> <span data-i18n="tab5_bullet3">برامج إعداد وتأهيل للدمج المدرسي العام</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80" alt="Life Skills" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tuition & Needs Assessment Calculator -->
+    <section id="calculator" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-6 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-teal-800">
+                
+                <!-- Background Accent Glows -->
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-teal-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="calc_badge">أداة تقييم تفاعلية</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-3 text-white" data-i18n="calc_title">حاسبة تقدير الاحتياجات والبرنامج المقترح</h2>
+                    <p class="text-slate-300 text-sm mt-2" data-i18n="calc_subtitle">اختر عمر طفلك ونوع الدعم المطلوب للحصول على توصية فورية ببرنامج التأهيل المناسب</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Form Controls -->
+                    <div class="space-y-6 bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                        <!-- Age Group Select -->
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_age">عمر الطفل / الفئة العمرية:</label>
+                            <select id="calcAge" onchange="calculateNeeds()" class="w-full bg-slate-800 text-white rounded-xl p-3 border border-slate-700 focus:outline-none focus:border-teal-500 text-sm">
+                                <option value="early" data-i18n="calc_age_1">التدخل المبكر (3 - 5 سنوات)</option>
+                                <option value="primary" selected data-i18n="calc_age_2">المرحلة الأساسية (6 - 10 سنوات)</option>
+                                <option value="preteen" data-i18n="calc_age_3">مرحلة اليافعين (11 - 15 سنة)</option>
+                            </select>
+                        </div>
+
+                        <!-- Main Focus Need -->
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_focus">مجال التركيز الرئيسي المطلوب:</label>
+                            <select id="calcFocus" onchange="calculateNeeds()" class="w-full bg-slate-800 text-white rounded-xl p-3 border border-slate-700 focus:outline-none focus:border-teal-500 text-sm">
+                                <option value="speech" data-i18n="calc_focus_1">تأخر النطق والتخاطب</option>
+                                <option value="behavior" data-i18n="calc_focus_2">تعديل السلوك وتشتت الانتباه (ADHD)</option>
+                                <option value="autism" data-i18n="calc_focus_3">اضطراب طيف التوحد والتأهيل الكلي</option>
+                                <option value="learning" data-i18n="calc_focus_4">صعوبات التعلم والأكاديمي الخاص</option>
+                            </select>
+                        </div>
+
+                        <!-- Checkboxes for Additional Support -->
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_services">جلسات إضافية مقترحة:</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
+                                    <input type="checkbox" id="srvSpeech" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700" checked>
+                                    <span data-i18n="calc_srv_1">جلسات تخاطب ونطق مكثفة</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
+                                    <input type="checkbox" id="srvMotor" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700" checked>
+                                    <span data-i18n="calc_srv_2">علاج وظيفي وحركي</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
+                                    <input type="checkbox" id="srvBus" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700">
+                                    <span data-i18n="calc_srv_3">خدمة المواصلات بزوارت وما حولها</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Output Card -->
+                    <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-teal-100 flex flex-col justify-between h-full space-y-6">
+                        <div>
+                            <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+                                <span class="text-xs font-bold text-teal-600 uppercase" data-i18n="calc_res_badge">التوصية الأولية المقترحة</span>
+                                <i class="fa-solid fa-receipt text-amber-500 text-lg"></i>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4 id="calcProgramTitle" class="text-lg font-bold text-slate-900">البرنامج الشامل للتأهيل والتربية الخاصة</h4>
+                                <p id="calcProgramDesc" class="text-xs text-slate-500 mt-1">يشتمل على خطة فردية (IEP) + جلسات دعم أسبوعية.</p>
+                            </div>
+
+                            <div class="mt-6 space-y-2 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <div class="flex justify-between">
+                                    <span class="text-slate-600" data-i18n="calc_hours_label">عدد الساعات التقديرية:</span>
+                                    <span id="calcHours" class="font-bold text-slate-900">12 - 15 ساعة أسبوعياً</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-600" data-i18n="calc_eval_label">التقييم الأولي:</span>
+                                    <span class="font-bold text-teal-600" data-i18n="calc_free">مجاني بالكامل</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <a href="#apply" onclick="prefillFormFromCalc()" class="block text-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm" data-i18n="calc_apply_btn">
+                                اعتمد هذا التقييم وابدأ التسجيل
+                            </a>
+                            <p class="text-[11px] text-center text-slate-400" data-i18n="calc_disclaimer">* التقييم النهائي والدقيق يتم إعداده بعد جلسة المقابلة التشخيصية في مقر المدرسة بزوارت.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Form Section -->
+    <section id="apply" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-slate-100">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-teal-600 font-bold text-sm tracking-wide uppercase" data-i18n="form_badge">انضم لأسرة النواة</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1" data-i18n="form_title">نموذج تقديم الطلب والزيارة</h2>
+                    <p class="text-slate-600 text-sm mt-2" data-i18n="form_subtitle">يرجى تعبئة البيانات التالية وستتواصل معكم إدارة المدرسة خلال 24 ساعة لتحديد موعد التقييم.</p>
+                </div>
+
+                <!-- Confirmation Alert Box -->
+                <div id="formSuccessAlert" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-2xl"></i>
+                    <div>
+                        <p class="font-bold text-sm" data-i18n="alert_success_title">تم إرسال طلبكم بنجاح!</p>
+                        <p class="text-xs text-emerald-700" data-i18n="alert_success_desc">شكراً لثقتكم بمدرسة النواة بزوارت. سيتصل بكم فريق القبول والتسجيل في أقرب وقت.</p>
+                    </div>
+                </div>
+
+                <form id="admissionForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Parent Name -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_parent_name">اسم ولي الأمر بالكامل *</label>
+                            <input type="text" required placeholder="مثال: أحمد علي المحمودي" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_phone">رقم الهاتف / الواتساب *</label>
+                            <input type="tel" required placeholder="091XXXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm" dir="ltr">
+                        </div>
+
+                        <!-- Child Name -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_child_name">اسم الطفل الثلاثي *</label>
+                            <input type="text" required placeholder="اسم الطفل" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                        </div>
+
+                        <!-- Child Age -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_child_age">عمر الطفل (بالسنوات) *</label>
+                            <input type="number" min="2" max="18" required placeholder="مثال: 6" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Service Needed -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_service">الخدمة أو البرنامج المطلوب *</label>
+                            <select id="formServiceSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm bg-white">
+                                <option value="" data-i18n="opt_select">-- اختر الخدمة --</option>
+                                <option value="special_ed" data-i18n="opt_1">التربية الخاصة الشاملة</option>
+                                <option value="speech" data-i18n="opt_2">جلسات تخاطب وتقويم نطق</option>
+                                <option value="behavior" data-i18n="opt_3">تعديل سلوك وفرط حركة</option>
+                                <option value="motor" data-i18n="opt_4">علاج وظيفي وحركي</option>
+                                <option value="eval" data-i18n="opt_5">جلسة تقييم شامل واستشارة</option>
+                            </select>
+                        </div>
+
+                        <!-- Preferred Visit Date -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_date">التاريخ المفضل للزيارة والمقابلة</label>
+                            <input type="date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm bg-white">
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="lbl_notes">ملاحظات أو تفاصيل إضافية حول حالة الطفل</label>
+                        <textarea rows="3" placeholder="اذكر أي تفاصيل تود إطلاع الأخصائيين عليها قبل المقابلة..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-600/20 text-base transition-all hover:scale-[1.01]">
+                        <i class="fa-solid fa-paper-plane me-2"></i>
+                        <span data-i18n="btn_submit">إرسال طلب التقييم والزيارة</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-teal-600 font-bold text-sm tracking-wide uppercase" data-i18n="test_badge">قصص نجاح وثقة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2" data-i18n="test_title">ماذا يقول أولياء الأمور عنا؟</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 absolute top-6 end-6"></i>
+                    <div class="space-y-4 relative z-10">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed" data-i18n="review1_text">
+                            "تطور ابننا في النطق والحديث خلال 4 أشهر فقط مع مدرسة النواة كان مذهلاً. الكادر يتامل برحمة وصبر غير عاديين. شكراً لكل المعلمين في زوارة!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm">أ.م</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="review1_author">أم محمد</h4>
+                            <p class="text-xs text-slate-500" data-i18n="review1_role">ولي أمر طالب بمرحلة التخاطب</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 absolute top-6 end-6"></i>
+                    <div class="space-y-4 relative z-10">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed" data-i18n="review2_text">
+                            "أهم ما يميز المدرسة هو الخطة الفردية الدقيقة والمتابعة المستمرة مع الأسرة. شعرنا بالأمان الكامل وأن ابنتنا بين أيدٍ أمينة وحريصة."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold text-sm">ع.ز</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="review2_author">أبو سارة</h4>
+                            <p class="text-xs text-slate-500" data-i18n="review2_role">ولي أمر طالبة في برنامج التربية الخاصة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 absolute top-6 end-6"></i>
+                    <div class="space-y-4 relative z-10">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed" data-i18n="review3_text">
+                            "تغير سلوك ابني وأصبح أكثر تركيزاً واستقلالية بفضل جلسات تعديل السلوك والعلاج الوظيفي. مدرسة النواة مكان إيجابي ومحفز بحق."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm">ف.ط</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="review3_author">السيدة فاطمة</h4>
+                            <p class="text-xs text-slate-500" data-i18n="review3_role">ولي أمر طالب في برنامج تعديل السلوك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-amber-400 font-bold text-sm uppercase tracking-wider" data-i18n="contact_badge">موقعنا والتواصل</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 text-white" data-i18n="contact_title">يسعدنا استقبالكم وزيارتكم</h2>
+                        <p class="text-slate-400 text-sm mt-3" data-i18n="contact_desc">نرحب بزيارتكم للمدرسة بمدينة زوارة للاطلاع على مرافقنا والالتقاء بالفريق الأخصائي.</p>
+                    </div>
+
+                    <div class="space-y-6 text-sm">
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-teal-800/80 rounded-2xl flex items-center justify-center text-teal-300 text-xl shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base" data-i18n="info_address_title">العنوان والرمز المكانية</h4>
+                                <p class="text-slate-300 mt-1" data-i18n="info_address_val">زوارت، ليبيا (W3W3+Q33, Zuwara)</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-2xl flex items-center justify-center text-amber-400 text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base" data-i18n="info_phone_title">أرقام التواصل</h4>
+                                <p class="text-slate-300 mt-1" dir="ltr">+218 91 000 0000 / +218 92 000 0000</p>
+                            </div>
+                        </div>
+
+                        <!-- Working Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-sky-500/20 rounded-2xl flex items-center justify-center text-sky-400 text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base" data-i18n="info_hours_title">أوقات العمل واستقبال المراجعين</h4>
+                                <p class="text-slate-300 mt-1" data-i18n="info_hours_val">الأحد - الخميس: 8:00 صباحاً - 2:00 ظهراً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all shadow-md">
+                            <i class="fa-solid fa-location-arrow"></i>
+                            <span data-i18n="btn_maps">فتح في خرائط Google</span>
+                        </a>
+                        <a href="https://wa.me/218910000000" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all shadow-md">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span data-i18n="btn_whatsapp">مراسلة عبر الواتساب</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Location Map Card -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-800 rounded-3xl p-4 border border-slate-700 shadow-2xl relative overflow-hidden">
+                        <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-900 flex flex-col justify-between p-6">
+                            <!-- Simulated Map Design -->
+                            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            
+                            <div class="relative z-10 flex justify-between items-start">
+                                <span class="bg-slate-900/90 backdrop-blur-md text-teal-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-teal-500/30 flex items-center gap-2">
+                                    <i class="fa-solid fa-compass spin"></i> W3W3+Q33, Zuwara, Libya
+                                </span>
+                            </div>
+
+                            <div class="relative z-10 my-auto text-center space-y-3">
+                                <div class="w-16 h-16 bg-teal-600/90 text-amber-300 rounded-full flex items-center justify-center text-2xl mx-auto shadow-lg shadow-teal-500/50 animate-bounce">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white" data-i18n="map_card_title">مدرسة النواة للتعليم الخاص</h3>
+                                <p class="text-xs text-slate-300" data-i18n="map_card_sub">زوارت - بالقرب من المركز الخادمي والتأهيلي</p>
+                            </div>
+
+                            <div class="relative z-10 flex justify-center">
+                                <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-6 py-2.5 rounded-xl shadow-lg transition-transform hover:scale-105" data-i18n="map_btn">
+                                    احصل على اتجاهات الطريق
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-start">
+            <div>
+                <p class="font-semibold text-slate-300" data-i18n="footer_copy">© 2026 مدرسة النواة للتعليم الخاص - زوارة، ليبيا. جميع الحقوق محفوظة.</p>
+                <p class="text-slate-500 text-[11px] mt-1" data-i18n="footer_sub">متخصصون في التربية الخاصة، التخاطب، والعلاج الوظيفي والسلوكي.</p>
+            </div>
+            <div class="flex gap-4 text-base text-slate-300">
+                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/218910000000" class="hover:text-teal-400"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dictionary for Arabic and English
+        const translations = {
+            ar: {
+                top_bar_location: "زوارت، ليبيا (W3W3+Q33)",
+                top_bar_hours: "الأحد - الخميس: 8:00 ص - 2:00 م",
+                brand_name: "مدرسة النواة للتعليم الخاص",
+                brand_subtitle: "Al-Nawat Special Education School • Zuwara",
+                nav_about: "عن المدرسة",
+                nav_programs: "برامجنا التخصصية",
+                nav_calc: "حاسبة الاحتياجات",
+                nav_reviews: "آراء أولياء الأمور",
+                nav_contact: "التواصل والموقع",
+                nav_apply: "تقديم طلب تسجيل",
+                hero_badge: "بيئة تعليمية وتربوية آمنة ومحفزة للأطفال بزوارت",
+                hero_title: 'ننمي قدرات طفلك، لنبني غداً ممتلئاً <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">بالاستقلالية والنجاح</span>',
+                hero_desc: "في مدرسة النواة للتعليم الخاص بزوارت، نقدم برامج فردية متخصصة (IEP) تحت إشراف نخبة من أخصائي التربية الخاصة، التخاطب، العلاج الوظيفي والسلوكي لضمان أفضل نمو وتكامل لطفلك.",
+                hero_cta_apply: "قدم طلب تسجيل الآن",
+                hero_cta_tour: "احجز زيارة للمدرسة",
+                stat_1: "خطط فردية مخصصة",
+                stat_2: "جلسات تخاطب وترميم",
+                stat_3: "ثقة أولياء الأمور",
+                hero_image_badge: "رعاية متكاملة",
+                hero_image_title: "فصول تعليمية وتأهيلية تجهيز حديث",
+                hero_feat_1: "تقييم شامل ومجاني في الزيارة الأولى",
+                hero_feat_2: "تكامل المهارات الحياتية والدمج المجتمعي",
+                about_subtitle: "رؤيتنا ورسالتنا",
+                about_title: "لماذا تختار مدرسة النواة بزوارت؟",
+                philosophy_1_title: "الخطة التربوية الفردية (IEP)",
+                philosophy_1_desc: "تصميم خطة تعليمية وتأهيلية لكل طالب بناءً على نقاط قوته وااحتياجاته الفردية الدقيقة بمشاركة ولي الأمر.",
+                philosophy_2_title: "فريق متخصص ذو خبرة عالية",
+                philosophy_2_desc: "كادر تعليمي وتربي حاصل على أعلى الشهادات والتراخيص في مجالات التربية الخاصة، النطق، والعلاج النفسي.",
+                philosophy_3_title: "الدمج والدمج الاجتماعي",
+                philosophy_3_desc: "نعمل على تمكين الطالب من التفاعل مع المجتمع وبناء استقلاليته في الحياة اليومية والاعتماد على الذات.",
+                mission_badge: "رسالة المدرسة",
+                mission_title: '"نحن نؤمن أن لكل طفل قدرات كامنة تنتظر فقط البيئة الصالحة للتفتح والازدهار."',
+                mission_subtitle: "مدرسة النواة بزوارت - بوابتكم نحو مستقبل أفضل وأكثر ثقة لأطفالكم.",
+                mission_cta: "سجل طفلك اليوم",
+                prog_subtitle: "خدماتنا التعليمية والعلاجية",
+                prog_title: "برامج متكاملة مصممة لكل احتياج",
+                prog_desc: "انقر على البرنامج للاطلاع على كافة التفاصيل والخدمات المشمولة",
+                tab_1: "التربية الخاصة",
+                tab_2: "جلسات النطق واللغة",
+                tab_3: "التعديل السلوكي",
+                tab_4: "العلاج الوظيفي والحركي",
+                tab_5: "المهارات الحياتية والدمج",
+                tab1_tag: "برنامج أساسي",
+                tab1_heading: "برامج التربية الخاصة الفردية",
+                tab1_desc: "نقدم منهاجاً تعليمياً وتأهيلياً مرناً يتناسب مع قدرات الأطفال من ذوي الإعاقة الذهنية وصعوبات التعلم، مع التركيز على التقدم الأكاديمي والمهاري بأساليب تعليمية تفاعلية حديثة.",
+                tab1_bullet1: "تطوير مهارات القراءة والحساب الأساسية",
+                tab1_bullet2: "تقنيات التعليم باللعب الوسائط المتعددة",
+                tab1_bullet3: "تقارير دورية لشرح مدى تقدم الطالب للوالدين",
+                tab2_tag: "علاج متخصص",
+                tab2_heading: "جلسات تخاطب وتقويم النطق",
+                tab2_desc: "نساعد الأطفال على تجاوز التأخر اللغوي، التلعثم، ومشاكل النطق وإخارج الحروف، عبر جلسات فردية مركزة وتأهيل أعضاء النطق بأحدث الممارسات.",
+                tab2_bullet1: "تحسين النطق والحصيلة اللغوية",
+                tab2_bullet2: "تدريب على التواصل اللفظي والغير لفظي",
+                tab2_bullet3: "أدوات وتقنيات تخاطب سمعية وبصرية حديثة",
+                tab3_tag: "دعم نفسي وتربوي",
+                tab3_heading: "التعديل السلوكي والدعم النفسي",
+                tab3_desc: "برامج خبيرة للتعامل مع سلوكيات فرط الحركة وشديدي التشتت (ADHD) واضطراب طيف التوحد، لتعزيز السلوكيات الإيجابية وتقليل التوتر والعصبية.",
+                tab3_bullet1: "خطط تعديل سلوك علمية ومدروسة",
+                tab3_bullet2: "استراتيجيات تعزيز التركيز والانتباه",
+                tab3_bullet3: "استشارات وإرشادات دورية لأسرة الطفل",
+                tab4_tag: "تأهيل حركي",
+                tab4_heading: "العلاج الوظيفي والحركي الدقيق",
+                tab4_desc: "تطوير المهارات الحركية الدقيقة والكبيرة (مثل مسك القلم، التوازن، والتحكم باليدين) لمساعدة الطفل على الاعتماد على نفسه في أنشطته اليومية.",
+                tab4_bullet1: "تمارين التناسق الحركي والبصري",
+                tab4_bullet2: "تكامل المهارات الحركية الصغرى والكبرى",
+                tab4_bullet3: "غرف علاج حركي مجهزة وآمنة",
+                tab5_tag: "اعتماد على الذات",
+                tab5_heading: "المهارات الحياتية والتأهيل للدمج",
+                tab5_desc: "تدريب أطفالنا على أنشطة الحياة اليومية العادية كالارتداء، التغذية الذاتية، قواعد السلامة العامة، والمهارات الاجتماعية والتفاعل مع الأقران.",
+                tab5_bullet1: "أنشطة تفاعلية ورحلات تعليمية خارجية",
+                tab5_bullet2: "تعزيز الاستقلالية في العناية الذاتية",
+                tab5_bullet3: "برامج إعداد وتأهيل للدمج المدرسي العام",
+                calc_badge: "أداة تقييم تفاعلية",
+                calc_title: "حاسبة تقدير الاحتياجات والبرنامج المقترح",
+                calc_subtitle: "اختر عمر طفلك ونوع الدعم المطلوب للحصول على توصية فورية ببرنامج التأهيل المناسب",
+                calc_label_age: "عمر الطفل / الفئة العمرية:",
+                calc_age_1: "التدخل المبكر (3 - 5 سنوات)",
+                calc_age_2: "المرحلة الأساسية (6 - 10 سنوات)",
+                calc_age_3: "مرحلة اليافعين (11 - 15 سنة)",
+                calc_label_focus: "مجال التركيز الرئيسي المطلوب:",
+                calc_focus_1: "تأخر النطق والتخاطب",
+                calc_focus_2: "تعديل السلوك وتشتت الانتباه (ADHD)",
+                calc_focus_3: "اضطراب طيف التوحد والتأهيل الكلي",
+                calc_focus_4: "صعوبات التعلم والأكاديمي الخاص",
+                calc_label_services: "جلسات إضافية مقترحة:",
+                calc_srv_1: "جلسات تخاطب ونطق مكثفة",
+                calc_srv_2: "علاج وظيفي وحركي",
+                calc_srv_3: "خدمة المواصلات بزوارت وما حولها",
+                calc_res_badge: "التوصية الأولية المقترحة",
+                calc_hours_label: "عدد الساعات التقديرية:",
+                calc_eval_label: "التقييم الأولي:",
+                calc_free: "مجاني بالكامل",
+                calc_apply_btn: "اعتمد هذا التقييم وابدأ التسجيل",
+                calc_disclaimer: "* التقييم النهائي والدقيق يتم إعداده بعد جلسة المقابلة التشخيصية في مقر المدرسة بزوارت.",
+                form_badge: "انضم لأسرة النواة",
+                form_title: "نموذج تقديم الطلب والزيارة",
+                form_subtitle: "يرجى تعبئة البيانات التالية وستتواصل معكم إدارة المدرسة خلال 24 ساعة لتحديد موعد التقييم.",
+                alert_success_title: "تم إرسال طلبكم بنجاح!",
+                alert_success_desc: "شكراً لثقتكم بمدرسة النواة بزوارت. سيتصل بكم فريق القبول والتسجيل في أقرب وقت.",
+                lbl_parent_name: "اسم ولي الأمر بالكامل *",
+                lbl_phone: "رقم الهاتف / الواتساب *",
+                lbl_child_name: "اسم الطفل الثلاثي *",
+                lbl_child_age: "عمر الطفل (بالسنوات) *",
+                lbl_service: "الخدمة أو البرنامج المطلوب *",
+                opt_select: "-- اختر الخدمة --",
+                opt_1: "التربية الخاصة الشاملة",
+                opt_2: "جلسات تخاطب وتقويم نطق",
+                opt_3: "تعديل سلوك وفرط حركة",
+                opt_4: "علاج وظيفي وحركي",
+                opt_5: "جلسة تقييم شامل واستشارة",
+                lbl_date: "التاريخ المفضل للزيارة والمقابلة",
+                lbl_notes: "ملاحظات أو تفاصيل إضافية حول حالة الطفل",
+                btn_submit: "إرسال طلب التقييم والزيارة",
+                test_badge: "قصص نجاح وثقة",
+                test_title: "ماذا يقول أولياء الأمور عنا؟",
+                review1_text: '"تطور ابننا في النطق والحديث خلال 4 أشهر فقط مع مدرسة النواة كان مذهلاً. الكادر يتعامل برحمة وصبر غير عاديين. شكراً لكل المعلمين في زوارة!"',
+                review1_author: "أم محمد",
+                review1_role: "ولي أمر طالب بمرحلة التخاطب",
+                review2_text: '"أهم ما يميز المدرسة هو الخطة الفردية الدقيقة والمتابعة المستمرة مع الأسرة. شعرنا بالأمان الكامل وأن ابنتنا بين أيدٍ أمينة وحريصة."',
+                review2_author: "أبو سارة",
+                review2_role: "ولي أمر طالبة في برنامج التربية الخاصة",
+                review3_text: '"تغير سلوك ابني وأصبح أكثر تركيزاً واستقلالية بفضل جلسات تعديل السلوك والعلاج الوظيفي. مدرسة النواة مكان إيجابي ومحفز بحق."',
+                review3_author: "السيدة فاطمة",
+                review3_role: "ولي أمر طالب في برنامج تعديل السلوك",
+                contact_badge: "موقعنا والتواصل",
+                contact_title: "يسعدنا استقبالكم وزيارتكم",
+                contact_desc: "نرحب بزيارتكم للمدرسة بمدينة زوارة للاطلاع على مرافقنا والالتقاء بالفريق الأخصائي.",
+                info_address_title: "العنوان والرمز المكاني",
+                info_address_val: "زوارت، ليبيا (W3W3+Q33, Zuwara)",
+                info_phone_title: "أرقام التواصل",
+                info_hours_title: "أوقات العمل واستقبال المراجعين",
+                info_hours_val: "الأحد - الخميس: 8:00 صباحاً - 2:00 ظهراً",
+                btn_maps: "فتح في خرائط Google",
+                btn_whatsapp: "مراسلة عبر الواتساب",
+                map_card_title: "مدرسة النواة للتعليم الخاص",
+                map_card_sub: "زوارت - بالقرب من المركز الخدمي والتأهيلي",
+                map_btn: "احصل على اتجاهات الطريق",
+                footer_copy: "© 2026 مدرسة النواة للتعليم الخاص - زوارة، ليبيا. جميع الحقوق محفوظة.",
+                footer_sub: "متخصصون في التربية الخاصة، التخاطب، والعلاج الوظيفي والسلوكي."
+            },
+            en: {
+                top_bar_location: "Zuwara, Libya (W3W3+Q33)",
+                top_bar_hours: "Sun - Thu: 8:00 AM - 2:00 PM",
+                brand_name: "Al-Nawat Special Education School",
+                brand_subtitle: "Al-Nawat School • Zuwara, Libya",
+                nav_about: "About Us",
+                nav_programs: "Programs",
+                nav_calc: "Needs Assessment",
+                nav_reviews: "Testimonials",
+                nav_contact: "Contact & Location",
+                nav_apply: "Enroll Now",
+                hero_badge: "Safe, Nurturing & Empowering Learning Environment in Zuwara",
+                hero_title: 'Nurturing Potential, Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">Independence & Success</span>',
+                hero_desc: "At Al-Nawat Special Education School in Zuwara, we provide tailored Individualized Education Plans (IEP) led by expert special education teachers, speech therapists, and occupational specialists.",
+                hero_cta_apply: "Apply for Admission",
+                hero_cta_tour: "Book a Campus Visit",
+                stat_1: "Personalized Individual IEPs",
+                stat_2: "1-on-1 Therapy Sessions",
+                stat_3: "Parent Trust Rating",
+                hero_image_badge: "Comprehensive Care",
+                hero_image_title: "Modern Equipped Classrooms & Therapy Rooms",
+                hero_feat_1: "Free Initial Evaluation on First Visit",
+                hero_feat_2: "Life Skills Integration & Social Inclusion",
+                about_subtitle: "Our Vision & Philosophy",
+                about_title: "Why Choose Al-Nawat School in Zuwara?",
+                philosophy_1_title: "Individualized Education Plan (IEP)",
+                philosophy_1_desc: "Customized learning and rehabilitation plan crafted for every child based on their unique strengths and needs.",
+                philosophy_2_title: "Experienced Specialized Team",
+                philosophy_2_desc: "Certified special educators, speech therapists, and child psychologists dedicated to nurturing student progress.",
+                philosophy_3_title: "Inclusion & Social Integration",
+                philosophy_3_desc: "Empowering children to build self-confidence, communication skills, and independence in daily life activities.",
+                mission_badge: "Our Mission",
+                mission_title: '"We believe every child possesses potential waiting for the right supportive environment to bloom."',
+                mission_subtitle: "Al-Nawat School in Zuwara - Your gateway to a brighter, more confident future.",
+                mission_cta: "Enroll Your Child Today",
+                prog_subtitle: "Educational & Therapeutic Services",
+                prog_title: "Tailored Programs for Every Unique Need",
+                prog_desc: "Click on a program tab below to explore detailed services and modules",
+                tab_1: "Special Education",
+                tab_2: "Speech Therapy",
+                tab_3: "Behavior Support",
+                tab_4: "Occupational Therapy",
+                tab_5: "Life Skills & Inclusion",
+                tab1_tag: "Core Program",
+                tab1_heading: "Individual Special Education Programs",
+                tab1_desc: "Flexible academic and developmental curriculum designed for students with intellectual or learning difficulties, combining interactive learning tools with structured growth goals.",
+                tab1_bullet1: "Core literacy and foundational math skills",
+                tab1_bullet2: "Multi-sensory and play-based learning techniques",
+                tab1_bullet3: "Regular student progress tracking for parents",
+                tab2_tag: "Specialized Therapy",
+                tab2_heading: "Speech & Language Therapy Sessions",
+                tab2_desc: "Targeted 1-on-1 speech rehabilitation for language delays, articulation issues, and stuttering using modern communicative tools.",
+                tab2_bullet1: "Enhanced vocabulary and speech clarity",
+                tab2_bullet2: "Verbal and non-verbal communication training",
+                tab2_bullet3: "Modern audio-visual therapy resources",
+                tab3_tag: "Behavioral Guidance",
+                tab3_heading: "Behavior Modification & Psychological Support",
+                tab3_desc: "Expert strategies for managing ADHD, autism spectrum needs, and hyperactive behaviors while strengthening positive habits and focus.",
+                tab3_bullet1: "Evidence-based behavior modification plans",
+                tab3_bullet2: "Attention and concentration enhancement exercises",
+                tab3_bullet3: "Family guidance and home routine support",
+                tab4_tag: "Motor Rehabilitation",
+                tab4_heading: "Occupational & Motor Skill Development",
+                tab4_desc: "Developing fine and gross motor skills—such as pencil grip, hand-eye coordination, and balance—to foster daily independence.",
+                tab4_bullet1: "Motor and visual coordination training",
+                tab4_bullet2: "Sensory integration and physical control",
+                tab4_bullet3: "Equipped safe occupational therapy rooms",
+                tab5_tag: "Self-Reliance",
+                tab5_heading: "Life Skills & School Integration",
+                tab5_desc: "Preparing children for daily tasks like self-feeding, dressing, social interaction, and smooth integration into mainstream environments.",
+                tab5_bullet1: "Interactive group activities & field trips",
+                tab5_bullet2: "Self-care and personal responsibility building",
+                tab5_bullet3: "School integration readiness programs",
+                calc_badge: "Interactive Assessment Tool",
+                calc_title: "Needs Assessment & Program Estimator",
+                calc_subtitle: "Select your child's age group and required support services for an instant program recommendation.",
+                calc_label_age: "Child's Age Group:",
+                calc_age_1: "Early Intervention (Ages 3 - 5)",
+                calc_age_2: "Primary Level (Ages 6 - 10)",
+                calc_age_3: "Pre-Teen & Youth (Ages 11 - 15)",
+                calc_label_focus: "Primary Focus Area Needed:",
+                calc_focus_1: "Speech & Language Delay",
+                calc_focus_2: "Behavior Modification & ADHD",
+                calc_focus_3: "Autism Spectrum & Comprehensive Support",
+                calc_focus_4: "Learning Difficulties & Special Academics",
+                calc_label_services: "Recommended Additional Modules:",
+                calc_srv_1: "Intensive Speech Therapy Sessions",
+                calc_srv_2: "Occupational & Motor Therapy",
+                calc_srv_3: "School Bus Transport in Zuwara Area",
+                calc_res_badge: "Recommended Program Outline",
+                calc_hours_label: "Estimated Weekly Hours:",
+                calc_eval_label: "Initial Evaluation:",
+                calc_free: "100% Free",
+                calc_apply_btn: "Apply With This Assessment",
+                calc_disclaimer: "* Official individualized assessment is confirmed during the diagnostic consultation visit at our Zuwara campus.",
+                form_badge: "Join Al-Nawat Family",
+                form_title: "Admissions & Campus Visit Form",
+                form_subtitle: "Please fill in the form below. Our admissions team will contact you within 24 hours to schedule an evaluation.",
+                alert_success_title: "Application Submitted Successfully!",
+                alert_success_desc: "Thank you for choosing Al-Nawat School in Zuwara. Our team will contact you very soon.",
+                lbl_parent_name: "Full Parent Name *",
+                lbl_phone: "Phone / WhatsApp Number *",
+                lbl_child_name: "Child's Full Name *",
+                lbl_child_age: "Child's Age (Years) *",
+                lbl_service: "Requested Program / Service *",
+                opt_select: "-- Select Service --",
+                opt_1: "Comprehensive Special Education",
+                opt_2: "Speech & Language Therapy",
+                opt_3: "Behavior Modification (ADHD)",
+                opt_4: "Occupational & Motor Therapy",
+                opt_5: "Full Diagnostic Evaluation Visit",
+                lbl_date: "Preferred Visit Date",
+                lbl_notes: "Additional Details / Special Notes",
+                btn_submit: "Submit Admission & Visit Request",
+                test_badge: "Parent Reviews & Trust",
+                test_title: "What Parents Say About Us",
+                review1_text: '"Our son’s speech progress within just 4 months at Al-Nawat was incredible. The teachers are remarkably patient and loving. Truly grateful to the Zuwara team!"',
+                review1_author: "Um Muhammad",
+                review1_role: "Parent of Speech Therapy Student",
+                review2_text: '"What sets Al-Nawat apart is their detailed IEP and constant communication with parents. We feel total confidence that our daughter is in safe hands."',
+                review2_author: "Abu Sarah",
+                review2_role: "Parent of Special Ed Student",
+                review3_text: '"My child became much more focused and independent after attending behavior modification and OT sessions. A truly inspiring educational school."',
+                review3_author: "Mrs. Fatima",
+                review3_role: "Parent of Behavior Support Student",
+                contact_badge: "Location & Contact",
+                contact_title: "We Welcome Your Campus Visit",
+                contact_desc: "Visit our campus in Zuwara to tour our facilities and consult with our diagnostic specialist team.",
+                info_address_title: "Address & Location Code",
+                info_address_val: "Zuwara, Libya (W3W3+Q33, Zuwara)",
+                info_phone_title: "Contact Numbers",
+                info_hours_title: "Working Hours",
+                info_hours_val: "Sunday - Thursday: 8:00 AM - 2:00 PM",
+                btn_maps: "Open in Google Maps",
+                btn_whatsapp: "Message on WhatsApp",
+                map_card_title: "Al-Nawat Special Education School",
+                map_card_sub: "Zuwara - Near Rehabilitation & Care Center",
+                map_btn: "Get Driving Directions",
+                footer_copy: "© 2026 Al-Nawat Special Education School - Zuwara, Libya. All rights reserved.",
+                footer_sub: "Specialized in Special Education, Speech Therapy, and Behavioral Rehabilitation."
+            }
+        };
+
+        let currentLang = 'ar';
+
+        // Toggle Language Function
+        document.getElementById('langToggle').addEventListener('click', function() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            
+            // Set Document Direction & Language Code
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = currentLang;
+
+            // Update Language Switcher Button Text
+            document.getElementById('langText').innerText = currentLang === 'ar' ? 'English' : 'عربي';
+
+            // Apply Font Adjustments
+            if (currentLang === 'en') {
+                document.body.classList.remove('font-cairo');
+                document.body.classList.add('font-sans');
+            } else {
+                document.body.classList.remove('font-sans');
+                document.body.classList.add('font-cairo');
+            }
+
+            // Update All Internationalized Elements
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            // Re-trigger calculator to update text strings dynamically
+            calculateNeeds();
+        });
+
+        // Tab Switcher Function
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Reset tab button styles
+            document.querySelectorAll('.program-tab').forEach(btn => {
+                btn.classList.remove('bg-teal-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Highlight active button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-white', 'text-slate-700');
+            activeBtn.classList.add('bg-teal-600', 'text-white', 'shadow-md');
+        }
+
+        // Needs Calculator Logic
+        function calculateNeeds() {
+            const age = document.getElementById('calcAge').value;
+            const focus = document.getElementById('calcFocus').value;
+            const srvSpeech = document.getElementById('srvSpeech').checked;
+            const srvMotor = document.getElementById('srvMotor').checked;
+
+            let titleKey = "البرنامج الشامل للتأهيل والتربية الخاصة";
+            let descText = "يشتمل على خطة فردية (IEP) + جلسات دعم أسبوعية.";
+            let hoursText = "12 - 15 ساعة أسبوعياً";
+
+            if (focus === 'speech') {
+                titleKey = currentLang === 'ar' ? "برنامج التخاطب والتأهيل اللغوي المكثف" : "Intensive Speech & Language Program";
+                descText = currentLang === 'ar' ? "جلسات نطق فردية 3 مرات أسبوعياً + تمارين متابعة منزلية." : "3x weekly individual speech sessions + home exercises.";
+                hoursText = "6 - 8 " + (currentLang === 'ar' ? "ساعات أسبوعياً" : "hours/week");
+            } else if (focus === 'behavior') {
+                titleKey = currentLang === 'ar' ? "برنامج تعديل السلوك وتعزيز الانتباه" : "Behavior Modification & Attention Program";
+                descText = currentLang === 'ar' ? "خطة سلوكية فردية مع أخصائي نفسي + جلسات تركيز." : "Individual behavior plan with psychologist + focus sessions.";
+                hoursText = "10 - 12 " + (currentLang === 'ar' ? "ساعات أسبوعياً" : "hours/week");
+            } else if (focus === 'autism') {
+                titleKey = currentLang === 'ar' ? "البرنامج المدمج الشامل (طيف التوحد)" : "Comprehensive Autism Support Program";
+                descText = currentLang === 'ar' ? "برنامج يومي متكامل (تربية خاصة + تخاطب + علاج وظيفي)." : "Full daily module (Special Ed + Speech + OT).";
+                hoursText = "15 - 20 " + (currentLang === 'ar' ? "ساعة أسبوعياً" : "hours/week");
+            } else {
+                titleKey = currentLang === 'ar' ? "برنامج صعوبات التعلم الأكاديمي" : "Academic Learning Support Program";
+                descText = currentLang === 'ar' ? "تقوية المهارات الأكاديمية وصعوبات القراءة والكتابة." : "Targeted literacy, numeracy, and cognitive support.";
+                hoursText = "8 - 10 " + (currentLang === 'ar' ? "ساعات أسبوعياً" : "hours/week");
+            }
+
+            document.getElementById('calcProgramTitle').innerText = titleKey;
+            document.getElementById('calcProgramDesc').innerText = descText;
+            document.getElementById('calcHours').innerText = hoursText;
+        }
+
+        // Transfer recommendation from calculator into admissions form
+        function prefillFormFromCalc() {
+            const focus = document.getElementById('calcFocus').value;
+            const selectEl = document.getElementById('formServiceSelect');
+            
+            if (focus === 'speech') selectEl.value = 'speech';
+            else if (focus === 'behavior') selectEl.value = 'behavior';
+            else if (focus === 'autism') selectEl.value = 'special_ed';
+            else selectEl.value = 'special_ed';
+        }
+
+        // Mobile Menu Drawer Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alert = document.getElementById('formSuccessAlert');
+            alert.classList.remove('hidden');
+            document.getElementById('admissionForm').reset();
+            alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Initialize defaults on page load
+        window.onload = function() {
+            calculateNeeds();
+        };
+    </script>
+</body>
+</html>
