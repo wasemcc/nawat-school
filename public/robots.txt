@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nawat-school.com/sitemap.xml
+Sitemap: https://nawat-school.onrender.com/sitemap.xml
