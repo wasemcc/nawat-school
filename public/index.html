@@ -87,9 +87,9 @@
             <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid me-1 fa-clock text-amber-400"></i> <span data-i18n="top_bar_hours">الأحد - الخميس: 8:00 ص - 2:00 م</span></span>
         </div>
         <div class="hidden md:flex items-center gap-3">
-            <a href="tel:+218919088977" class="hover:text-amber-300 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone text-xs"></i> <span dir="ltr">+218 91 908 8977</span></a>
+            <a href="tel:+218914022290" class="hover:text-amber-300 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone text-xs"></i> <span dir="ltr">+218 91 402 2290</span></a>
             <span class="text-teal-600">|</span>
-            <a href="https://wa.me/218919088977" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1"><i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp</a>
+            <a href="https://wa.me/218914022290" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1"><i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp</a>
         </div>
     </div>
 
@@ -718,7 +718,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-white text-base" data-i18n="info_phone_title">أرقام التواصل</h4>
-                                <p class="text-slate-300 mt-1" dir="ltr">+218 91 908 8977</p>
+                                <p class="text-slate-300 mt-1" dir="ltr">+218 91 402 2290</p>
                             </div>
                         </div>
 
@@ -791,7 +791,7 @@
             <div class="flex gap-4 text-base text-slate-300">
                 <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/218919088977" class="hover:text-teal-400"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/218914022290" class="hover:text-teal-400"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -1251,7 +1251,7 @@
                 if(formData.visitDate) message += `تاريخ الزيارة: ${formData.visitDate}\n`;
                 if(formData.notes) message += `ملاحظات: ${formData.notes}\n`;
 
-                const waLink = `https://wa.me/218919088977?text=${encodeURIComponent(message)}`;
+                const waLink = `https://wa.me/218914022290?text=${encodeURIComponent(message)}`;
                 setTimeout(() => {
                     window.open(waLink, '_blank');
                 }, 1500);
@@ -1264,6 +1264,8 @@
 
         window.onload = function() {
             calculateNeeds();
+            // Log visit to server -> Discord Webhook
+            fetch('/api/visit', { method: 'POST' }).catch(() => {});
         };
     </script>
 </body>
