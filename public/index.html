@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -62,28 +62,29 @@
             theme: {
                 extend: {
                     colors: {
-                        teal: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a',
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                            950: '#0b1d33',
                         },
-                        amber: {
-                            50: '#fffbeb',
-                            100: '#fef3c7',
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                        },
-                        sky: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            800: '#075985',
+                        gold: {
+                            50: '#fffdf5',
+                            100: '#fef9e7',
+                            200: '#fcf0c3',
+                            300: '#fae497',
+                            400: '#f6d566',
+                            500: '#e5b830',
+                            600: '#c59b27',
+                            700: '#9e791b',
+                            800: '#7a5a14',
                         }
                     },
                     fontFamily: {
@@ -100,20 +101,11 @@
             font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(245, 158, 11, 0.06) 50%, rgba(14, 165, 233, 0.08) 100%);
+        .academic-hero {
+            background-color: #f8fafc;
         }
-        .dark .hero-gradient {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.15) 0%, rgba(245, 158, 11, 0.1) 50%, rgba(14, 165, 233, 0.15) 100%);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-        .dark .glass-card {
-            background: rgba(30, 41, 59, 0.92);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .dark .academic-hero {
+            background-color: #0b1d33;
         }
         .hide-scroll::-webkit-scrollbar {
             display: none;
@@ -124,67 +116,69 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 antialiased selection:bg-teal-500 selection:text-white transition-colors">
+<body class="bg-slate-50 dark:bg-navy-950 text-slate-800 dark:text-slate-200 antialiased selection:bg-navy-900 selection:text-gold-300 transition-colors">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-teal-800 dark:bg-teal-900 text-white text-xs sm:text-sm py-2 px-4 text-center flex justify-between items-center max-w-7xl mx-auto rounded-b-xl shadow-inner">
-        <div class="flex items-center gap-4 mx-auto md:mx-0">
-            <span class="flex items-center gap-1.5"><i class="fa-solid me-1 fa-location-dot text-amber-400"></i> <span data-i18n="top_bar_location">زوارة، ليبيا (W3W3+Q33)</span></span>
-            <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid me-1 fa-clock text-amber-400"></i> <span data-i18n="top_bar_hours">الأحد - الخميس: 8:00 ص - 2:00 م</span></span>
-        </div>
-        <div class="hidden md:flex items-center gap-3">
-            <a href="tel:+218914022290" class="hover:text-amber-300 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone text-xs"></i> <span dir="ltr">+218 91 402 2290</span></a>
-            <span class="text-teal-600">|</span>
-            <a href="https://wa.me/218914022290" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1"><i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp</a>
+    <div class="bg-navy-950 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-navy-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6 mx-auto md:mx-0">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold-500"></i> <span data-i18n="top_bar_location">زوارة، ليبيا (W3W3+Q33)</span></span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-clock text-gold-500"></i> <span data-i18n="top_bar_hours">الأحد - الخميس: 8:00 ص - 2:00 م</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+218914022290" class="hover:text-gold-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-phone text-xs text-gold-500"></i> <span dir="ltr">+218 91 402 2290</span></a>
+                <span class="text-navy-700">|</span>
+                <a href="https://wa.me/218914022290" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-sm text-emerald-500"></i> WhatsApp</a>
+            </div>
         </div>
     </div>
 
     <!-- Main Header -->
-    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-slate-100 dark:border-slate-800 transition-colors">
+    <header class="sticky top-0 z-50 bg-white/98 dark:bg-navy-900/98 backdrop-blur-md shadow-sm border-b border-slate-200 dark:border-navy-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <a href="https://nawat-school.com/" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-2xl overflow-hidden bg-white flex items-center justify-center shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+                <a href="https://nawat-school.com/" class="flex items-center gap-3.5 group">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden bg-white p-1 border border-slate-200 dark:border-navy-700 shadow-sm group-hover:border-navy-900 dark:group-hover:border-gold-500 transition-all">
                         <img src="images/logo.jpg" alt="Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <h1 class="font-extrabold text-lg sm:text-xl text-teal-900 dark:text-teal-400 leading-tight" data-i18n="brand_name">مدرسة النواة الخاصة للتعليم الأساسي والثانوي</h1>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="brand_subtitle">nawat-school.com • Al-Nawat Private School</p>
+                        <h1 class="font-extrabold text-lg sm:text-xl text-navy-900 dark:text-white leading-tight" data-i18n="brand_name">مدرسة النواة الخاصة للتعليم الأساسي والثانوي</h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold" data-i18n="brand_subtitle">nawat-school.com • Al-Nawat Private School</p>
                     </div>
                 </a>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 font-semibold text-slate-700 dark:text-slate-300 text-sm">
-                    <a href="#about" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" data-i18n="nav_about">عن المدرسة</a>
-                    <a href="#programs" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" data-i18n="nav_programs">المراحل التعليمية</a>
-                    <a href="#calculator" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" data-i18n="nav_calc">حاسبة التسجيل</a>
-                    <a href="#testimonials" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" data-i18n="nav_reviews">آراء أولياء الأمور</a>
-                    <a href="#contact" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" data-i18n="nav_contact">التواصل والموقع</a>
+                <nav class="hidden lg:flex items-center gap-7 font-bold text-slate-700 dark:text-slate-300 text-sm">
+                    <a href="#about" class="hover:text-navy-900 dark:hover:text-gold-400 transition-colors" data-i18n="nav_about">عن المدرسة</a>
+                    <a href="#programs" class="hover:text-navy-900 dark:hover:text-gold-400 transition-colors" data-i18n="nav_programs">المراحل التعليمية</a>
+                    <a href="#calculator" class="hover:text-navy-900 dark:hover:text-gold-400 transition-colors" data-i18n="nav_calc">حاسبة التسجيل</a>
+                    <a href="#testimonials" class="hover:text-navy-900 dark:hover:text-gold-400 transition-colors" data-i18n="nav_reviews">آراء أولياء الأمور</a>
+                    <a href="#contact" class="hover:text-navy-900 dark:hover:text-gold-400 transition-colors" data-i18n="nav_contact">التواصل والموقع</a>
                 </nav>
 
                 <!-- Actions -->
                 <div class="flex items-center gap-3">
                     
                     <!-- Dark Mode Toggle Button -->
-                    <button id="themeToggle" class="flex items-center justify-center w-10 h-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-all shadow-sm">
-                        <i class="fa-solid fa-moon dark:hidden text-lg text-slate-600"></i>
-                        <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                    <button id="themeToggle" class="flex items-center justify-center w-10 h-10 bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-navy-700 rounded-xl transition-all border border-slate-200 dark:border-navy-700">
+                        <i class="fa-solid fa-moon dark:hidden text-lg text-navy-900"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg text-gold-400"></i>
                     </button>
 
                     <!-- Language Switcher -->
-                    <button id="langToggle" class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-300 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm">
-                        <i class="fa-solid fa-globe text-teal-600 dark:text-teal-400"></i>
+                    <button id="langToggle" class="flex items-center gap-2 bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-800 dark:text-slate-300 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all border border-slate-200 dark:border-navy-700">
+                        <i class="fa-solid fa-globe text-navy-800 dark:text-gold-400"></i>
                         <span id="langText">English</span>
                     </button>
 
                     <!-- CTA Button -->
-                    <a href="#apply" class="hidden sm:inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-amber-500/20 text-sm transition-all hover:scale-105" data-i18n="nav_apply">
+                    <a href="#apply" class="hidden sm:inline-flex items-center justify-center bg-navy-900 hover:bg-navy-950 dark:bg-gold-600 dark:hover:bg-gold-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-sm text-sm transition-all hover:scale-105" data-i18n="nav_apply">
                         تقديم طلب تسجيل
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 focus:outline-none">
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-700 dark:text-slate-300 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -192,88 +186,87 @@
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 font-semibold" data-i18n="nav_about">عن المدرسة</a>
-            <a href="#programs" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 font-semibold" data-i18n="nav_programs">المراحل التعليمية</a>
-            <a href="#calculator" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 font-semibold" data-i18n="nav_calc">حاسبة التسجيل</a>
-            <a href="#testimonials" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 font-semibold" data-i18n="nav_reviews">آراء أولياء الأمور</a>
-            <a href="#contact" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 font-semibold" data-i18n="nav_contact">التواصل والموقع</a>
-            <a href="#apply" class="block text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl shadow-sm" data-i18n="nav_apply">
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-navy-900 border-b border-slate-200 dark:border-navy-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-navy-900 font-bold" data-i18n="nav_about">عن المدرسة</a>
+            <a href="#programs" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-navy-900 font-bold" data-i18n="nav_programs">المراحل التعليمية</a>
+            <a href="#calculator" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-navy-900 font-bold" data-i18n="nav_calc">حاسبة التسجيل</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-navy-900 font-bold" data-i18n="nav_reviews">آراء أولياء الأمور</a>
+            <a href="#contact" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-navy-900 font-bold" data-i18n="nav_contact">التواصل والموقع</a>
+            <a href="#apply" class="block text-center bg-navy-900 text-white font-bold py-3 rounded-xl shadow-sm" data-i18n="nav_apply">
                 تقديم طلب تسجيل
             </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden hero-gradient py-16 lg:py-24 border-b border-teal-100/50 dark:border-teal-900/50">
+    <section class="academic-hero py-16 lg:py-24 border-b border-slate-200 dark:border-navy-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Hero Content -->
                 <div class="lg:col-span-7 text-center lg:text-start space-y-6">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100/80 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200 text-xs sm:text-sm font-bold border border-teal-200 dark:border-teal-800 shadow-sm">
-                        <i class="fa-solid fa-graduation-cap text-amber-500"></i>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-navy-100 dark:bg-navy-800 text-navy-900 dark:text-gold-300 text-xs sm:text-sm font-bold border border-navy-200 dark:border-navy-700">
+                        <i class="fa-solid fa-graduation-cap text-gold-600 dark:text-gold-400"></i>
                         <span data-i18n="hero_badge">بيئة تعليمية وتربوية حديثة ومتكاملة لأبنائنا بزوارت</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight" data-i18n="hero_title">
-                        تعليم متميز يبني العقول، ونستثمر في <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">مستقبل أبنائنا</span>
+                    <h1 class="text-3xl sm:text-5xl font-black text-navy-950 dark:text-white leading-tight" data-i18n="hero_title">
+                        تعليم متميز يبني العقول، ونستثمر في <span class="text-navy-700 dark:text-gold-400 underline underline-offset-8 decoration-gold-500">مستقبل أبنائنا</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
                         في مدرسة النواة الخاصة بزوارت، نقدم منهاجاً تعليمياً متطوراً يجمع بين الكفاءة الأكاديمية، والتربية القويمة، والأنشطة الإثرائية في مختلف المراحل الدراسية.
                     </p>
 
                     <!-- CTA Group -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#apply" class="flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-teal-600/30 text-base transition-all transform hover:-translate-y-0.5">
-                            <i class="fa-solid fa-paper-plane"></i>
+                        <a href="#apply" class="flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-950 text-white font-bold px-8 py-4 rounded-xl shadow-md text-base transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-paper-plane text-gold-400"></i>
                             <span data-i18n="hero_cta_apply">قدم طلب تسجيل الآن</span>
                         </a>
-                        <a href="#contact" class="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-bold px-8 py-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm text-base transition-all hover:border-teal-300 dark:hover:border-teal-600">
-                            <i class="fa-solid fa-school text-amber-500"></i>
+                        <a href="#contact" class="flex items-center justify-center gap-2 bg-white dark:bg-navy-800 hover:bg-slate-100 dark:hover:bg-navy-700 text-navy-900 dark:text-white font-bold px-8 py-4 rounded-xl border border-slate-300 dark:border-navy-700 shadow-sm text-base transition-all">
+                            <i class="fa-solid fa-school text-gold-600"></i>
                             <span data-i18n="hero_cta_tour">احجز زيارة للمدرسة</span>
                         </a>
                     </div>
 
                     <!-- Trust Indicators -->
-                    <div class="pt-8 border-t border-slate-200/80 dark:border-slate-700/80 grid grid-cols-3 gap-4 text-center lg:text-start">
+                    <div class="pt-8 border-t border-slate-200 dark:border-navy-800 grid grid-cols-3 gap-4 text-center lg:text-start">
                         <div>
-                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-700 dark:text-teal-400">100%</p>
-                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium" data-i18n="stat_1">مناهج تعليمية حديثة</p>
+                            <p class="text-2xl sm:text-3xl font-black text-navy-900 dark:text-gold-400">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-bold" data-i18n="stat_1">مناهج تعليمية حديثة</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-700 dark:text-teal-400">فصول مجهزة</p>
-                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium" data-i18n="stat_2">بيئة تعليمية تفاعلية</p>
+                            <p class="text-2xl sm:text-3xl font-black text-navy-900 dark:text-gold-400">فصول مجهزة</p>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-bold" data-i18n="stat_2">بيئة تعليمية تفاعلية</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-extrabold text-amber-600 dark:text-amber-500"><i class="fa-solid fa-star"></i> 5/5</p>
-                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium" data-i18n="stat_3">ثقة أولياء الأمور</p>
+                            <p class="text-2xl sm:text-3xl font-black text-gold-600 dark:text-gold-400"><i class="fa-solid fa-star"></i> 5/5</p>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-bold" data-i18n="stat_3">ثقة أولياء الأمور</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Graphic Illustration / Card Visual -->
+                <!-- Hero Photo Card -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Main Card -->
-                        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 border border-white dark:border-slate-700">
-                            <div class="w-full h-64 sm:h-72 bg-teal-100 dark:bg-slate-700 rounded-2xl overflow-hidden relative flex items-center justify-center mb-6 shadow-inner">
+                        <div class="bg-white dark:bg-navy-900 rounded-2xl p-4 shadow-lg border border-slate-200 dark:border-navy-700">
+                            <div class="w-full h-64 sm:h-72 bg-slate-200 dark:bg-navy-800 rounded-xl overflow-hidden relative flex items-center justify-center mb-4">
                                 <img src="images/hero-school.jpg" alt="Classroom" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'">
-                                <div class="absolute inset-0 bg-gradient-to-t from-teal-900/60 dark:from-slate-900/80 to-transparent"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent"></div>
                                 <div class="absolute bottom-4 start-4 text-white">
-                                    <span class="bg-amber-500 text-xs font-bold px-2.5 py-1 rounded-md mb-1 inline-block" data-i18n="hero_image_badge">تعليم متميز</span>
-                                    <h3 class="font-bold text-lg" data-i18n="hero_image_title">فصول ومختبرات تعليمية مجهزة بأحدث الوسائل</h3>
+                                    <span class="bg-gold-600 text-white text-xs font-bold px-2.5 py-1 rounded mb-1 inline-block" data-i18n="hero_image_badge">تعليم متميز</span>
+                                    <h3 class="font-bold text-base" data-i18n="hero_image_title">فصول ومختبرات تعليمية مجهزة بأحدث الوسائل</h3>
                                 </div>
                             </div>
 
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-3 p-3 bg-teal-50 dark:bg-slate-800/80 rounded-xl text-teal-800 dark:text-teal-300 text-sm font-semibold border border-transparent dark:border-teal-900/50">
-                                    <i class="fa-solid fa-check-circle text-teal-600 dark:text-teal-400 text-lg"></i>
+                            <div class="space-y-2.5">
+                                <div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-navy-800/80 rounded-lg text-navy-900 dark:text-slate-200 text-sm font-bold border border-slate-200 dark:border-navy-700">
+                                    <i class="fa-solid fa-circle-check text-navy-800 dark:text-gold-400 text-base"></i>
                                     <span data-i18n="hero_feat_1">تعليم تفاعلي ومتابعة أكاديمية مستمرة</span>
                                 </div>
-                                <div class="flex items-center gap-3 p-3 bg-amber-50 dark:bg-slate-800/80 rounded-xl text-amber-900 dark:text-amber-300 text-sm font-semibold border border-transparent dark:border-amber-900/30">
-                                    <i class="fa-solid fa-sparkles text-amber-500 dark:text-amber-400 text-lg"></i>
+                                <div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-navy-800/80 rounded-lg text-navy-900 dark:text-slate-200 text-sm font-bold border border-slate-200 dark:border-navy-700">
+                                    <i class="fa-solid fa-circle-check text-gold-600 dark:text-gold-400 text-base"></i>
                                     <span data-i18n="hero_feat_2">أنشطة لا صفية، كمبيوتر، ولغات أجنبية</span>
                                 </div>
                             </div>
@@ -286,46 +279,46 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors">
+    <section id="about" class="py-16 sm:py-24 bg-white dark:bg-navy-950 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-600 dark:text-teal-400 font-bold text-sm tracking-wide uppercase" data-i18n="about_subtitle">رؤيتنا ورسالتنا</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2" data-i18n="about_title">لماذا تختار مدرسة النواة بزوارة؟</h2>
-                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+                <span class="text-gold-600 dark:text-gold-400 font-extrabold text-sm tracking-widest uppercase" data-i18n="about_subtitle">رؤيتنا ورسالتنا</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 dark:text-white mt-2" data-i18n="about_title">لماذا تختار مدرسة النواة بزوارة؟</h2>
+                <div class="w-12 h-1 bg-navy-900 dark:bg-gold-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 group">
-                    <img src="images/iep.jpg" alt="Academic" class="w-full h-32 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
-                    <div class="w-14 h-14 bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div class="bg-slate-50 dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-navy-800 hover:border-navy-700 transition-all">
+                    <img src="images/iep.jpg" alt="Academic" class="w-full h-36 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
+                    <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="philosophy_1_title">التميز الأكاديمي والتعليم التفاعلي</h3>
+                    <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3" data-i18n="philosophy_1_title">التميز الأكاديمي والتعليم التفاعلي</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="philosophy_1_desc">
                         طرق تدريس حديثة ترتكز على الفهم والتطبيق وتطوير مهارات التفكير العلمي لدى الطلاب في مختلف المراحل.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 group">
-                    <img src="images/team.jpg" alt="Teachers" class="w-full h-32 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
-                    <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                <div class="bg-slate-50 dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-navy-800 hover:border-navy-700 transition-all">
+                    <img src="images/team.jpg" alt="Teachers" class="w-full h-36 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
+                    <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="philosophy_2_title">كادر تعليمي وتربوي مؤهل</h3>
+                    <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3" data-i18n="philosophy_2_title">كادر تعليمي وتربوي مؤهل</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="philosophy_2_desc">
                         نخبة من المعلمين والمربين ذوي الخبرة العالية في التدريس والتربية والحرص على التفوق الأكاديمي والتربوي.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 group">
-                    <img src="images/inclusion.jpg" alt="Activities" class="w-full h-32 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
-                    <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-400 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                <div class="bg-slate-50 dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-navy-800 hover:border-navy-700 transition-all">
+                    <img src="images/inclusion.jpg" alt="Activities" class="w-full h-36 object-cover rounded-xl mb-4" onerror="this.style.display='none'">
+                    <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-futbol"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="philosophy_3_title">بناء الشخصية والأنشطة الطلابية</h3>
+                    <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3" data-i18n="philosophy_3_title">بناء الشخصية والأنشطة الطلابية</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="philosophy_3_desc">
                         أنشطة رياضية وثقافية وتقنية متكاملة تنمي روح القيادة، الإبداع، والمشاركة المجتمعية الفعالة.
                     </p>
@@ -333,13 +326,13 @@
             </div>
 
             <!-- Mission Banner -->
-            <div class="mt-16 bg-gradient-to-r from-teal-700 to-teal-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+            <div class="mt-16 bg-navy-900 dark:bg-navy-900 rounded-2xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 border border-navy-800">
                 <div class="space-y-3 text-center md:text-start">
-                    <span class="text-amber-400 font-bold text-sm" data-i18n="mission_badge">رسالة المدرسة</span>
+                    <span class="text-gold-400 font-bold text-xs uppercase tracking-wider" data-i18n="mission_badge">رسالة المدرسة</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold" data-i18n="mission_title">"نحن نؤمن أن التعليم هو البذرة الأساسية لبناء أجيال مبدعة وواثقة وقادرة على صناعة المستقبل."</h3>
-                    <p class="text-teal-100 text-sm" data-i18n="mission_subtitle">مدرسة النواة الخاصة بزوارت - بوابتكم نحو التميز والتفوق الأكاديمي والتربوي.</p>
+                    <p class="text-slate-300 text-sm" data-i18n="mission_subtitle">مدرسة النواة الخاصة بزوارت - بوابتكم نحو التميز والتفوق الأكاديمي والتربوي.</p>
                 </div>
-                <a href="#apply" class="whitespace-nowrap bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-2xl transition-all hover:scale-105 shadow-md" data-i18n="mission_cta">
+                <a href="#apply" class="whitespace-nowrap bg-gold-600 hover:bg-gold-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-sm" data-i18n="mission_cta">
                     سجل طفلك اليوم
                 </a>
             </div>
@@ -347,55 +340,55 @@
     </section>
 
     <!-- Educational Stages & Programs Section -->
-    <section id="programs" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900 border-t border-b border-slate-200/60 dark:border-slate-800 transition-colors">
+    <section id="programs" class="py-16 sm:py-24 bg-slate-100 dark:bg-navy-900 border-t border-b border-slate-200 dark:border-navy-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-600 dark:text-teal-400 font-bold text-sm tracking-wide uppercase" data-i18n="prog_subtitle">مسيرتنا التعليمية</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2" data-i18n="prog_title">المراحل والبرامج التعليمية</h2>
+                <span class="text-gold-600 dark:text-gold-400 font-extrabold text-sm uppercase tracking-wider" data-i18n="prog_subtitle">مسيرتنا التعليمية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mt-2" data-i18n="prog_title">المراحل والبرامج التعليمية</h2>
                 <p class="text-slate-600 dark:text-slate-400 text-sm mt-3" data-i18n="prog_desc">انقر على المرحلة الدراسية للاطلاع على كافة التفاصيل والميزات التعليمية المتاحة</p>
             </div>
 
             <!-- Program Selector Tabs -->
             <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-8" id="programTabs">
-                <button onclick="switchTab('tab-special')" id="btn-tab-special" class="program-tab active p-4 rounded-2xl bg-teal-600 text-white font-bold text-sm text-center shadow-md transition-all flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-shapes text-xl"></i>
+                <button onclick="switchTab('tab-special')" id="btn-tab-special" class="program-tab active p-4 rounded-xl bg-navy-900 text-white font-bold text-sm text-center transition-all flex flex-col items-center gap-2 border border-navy-900">
+                    <i class="fa-solid fa-shapes text-xl text-gold-400"></i>
                     <span data-i18n="tab_1">رياض الأطفال</span>
                 </button>
-                <button onclick="switchTab('tab-speech')" id="btn-tab-speech" class="program-tab p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 font-bold text-sm text-center border border-slate-200 dark:border-slate-700 transition-all flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-pencil text-xl text-teal-600 dark:text-teal-400"></i>
+                <button onclick="switchTab('tab-speech')" id="btn-tab-speech" class="program-tab p-4 rounded-xl bg-white dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 font-bold text-sm text-center border border-slate-200 dark:border-navy-700 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-pencil text-xl text-navy-800 dark:text-gold-400"></i>
                     <span data-i18n="tab_2">التعليم الابتدائي</span>
                 </button>
-                <button onclick="switchTab('tab-behavior')" id="btn-tab-behavior" class="program-tab p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 font-bold text-sm text-center border border-slate-200 dark:border-slate-700 transition-all flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-atom text-xl text-teal-600 dark:text-teal-400"></i>
+                <button onclick="switchTab('tab-behavior')" id="btn-tab-behavior" class="program-tab p-4 rounded-xl bg-white dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 font-bold text-sm text-center border border-slate-200 dark:border-navy-700 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-atom text-xl text-navy-800 dark:text-gold-400"></i>
                     <span data-i18n="tab_3">التعليم الإعدادي</span>
                 </button>
-                <button onclick="switchTab('tab-motor')" id="btn-tab-motor" class="program-tab p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 font-bold text-sm text-center border border-slate-200 dark:border-slate-700 transition-all flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap text-xl text-teal-600 dark:text-teal-400"></i>
+                <button onclick="switchTab('tab-motor')" id="btn-tab-motor" class="program-tab p-4 rounded-xl bg-white dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 font-bold text-sm text-center border border-slate-200 dark:border-navy-700 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-xl text-navy-800 dark:text-gold-400"></i>
                     <span data-i18n="tab_4">التعليم الثانوي</span>
                 </button>
-                <button onclick="switchTab('tab-lifeskills')" id="btn-tab-lifeskills" class="program-tab col-span-2 md:col-span-1 p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 font-bold text-sm text-center border border-slate-200 dark:border-slate-700 transition-all flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-laptop-code text-xl text-teal-600 dark:text-teal-400"></i>
+                <button onclick="switchTab('tab-lifeskills')" id="btn-tab-lifeskills" class="program-tab col-span-2 md:col-span-1 p-4 rounded-xl bg-white dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 font-bold text-sm text-center border border-slate-200 dark:border-navy-700 transition-all flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-laptop-code text-xl text-navy-800 dark:text-gold-400"></i>
                     <span data-i18n="tab_5">المختبرات والأنشطة</span>
                 </button>
             </div>
 
             <!-- Tab Contents -->
-            <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl border border-slate-100 dark:border-slate-700">
+            <div class="bg-white dark:bg-navy-800 rounded-2xl p-8 border border-slate-200 dark:border-navy-700 shadow-sm">
                 <!-- Tab 1: Kindergarten -->
                 <div id="tab-special" class="tab-content grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <span class="bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-300 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab1_tag">تأسيس مبكر</span>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tab1_heading">مرحلة التأسيس ورياض الأطفال</h3>
+                        <span class="bg-navy-100 dark:bg-navy-700 text-navy-900 dark:text-gold-300 text-xs font-bold px-3 py-1 rounded" data-i18n="tab1_tag">تأسيس مبكر</span>
+                        <h3 class="text-2xl font-bold text-navy-900 dark:text-white" data-i18n="tab1_heading">مرحلة التأسيس ورياض الأطفال</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="tab1_desc">
                             تهيئة الأطفال للتعلم عبر أساليب تفاعلية ممتعة، وتنمية مهارات القراءة والكتابة والحساب الأولية والسلوكيات الإيجابية في بيئة دافئة وآمنة.
                         </p>
                         <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab1_bullet1">تنمية مهارات التفكير والتواصل والأخلاق العامة</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab1_bullet2">أنشطة تعليمية باللعب والوسائط المتعددة</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab1_bullet3">رعاية تربوية ونفسية واهتمام فردي متكامل</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab1_bullet1">تنمية مهارات التفكير والتواصل والأخلاق العامة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab1_bullet2">أنشطة تعليمية باللعب والوسائط المتعددة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab1_bullet3">رعاية تربوية ونفسية واهتمام فردي متكامل</span></li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 dark:bg-slate-700 shadow-inner">
+                    <div class="rounded-xl overflow-hidden h-64 bg-slate-100 dark:bg-navy-700">
                         <img src="images/special-ed.jpg" alt="Kindergarten" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80'">
                     </div>
                 </div>
@@ -403,18 +396,18 @@
                 <!-- Tab 2: Primary School -->
                 <div id="tab-speech" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-400 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab2_tag">بناء المعرفة</span>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tab2_heading">المرحلة الابتدائية (الصفوف 1 - 6)</h3>
+                        <span class="bg-gold-100 text-gold-800 text-xs font-bold px-3 py-1 rounded" data-i18n="tab2_tag">بناء المعرفة</span>
+                        <h3 class="text-2xl font-bold text-navy-900 dark:text-white" data-i18n="tab2_heading">المرحلة الابتدائية (الصفوف 1 - 6)</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="tab2_desc">
                             ترسيخ المبادئ الأكاديمية الأساسية في العلوم، الرياضيات، واللغات، مع تركيز مكثف على الفهم القرائي والتحليل وبناء الشخصية الواثقة.
                         </p>
                         <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab2_bullet1">مناهج تعليمية معتمدة ومتطورة</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab2_bullet2">متابعة دورية وتقارير مستوى للوالدين</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab2_bullet3">تقنيات تدريس تفاعلية حديثة داخل الفصول</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab2_bullet1">مناهج تعليمية معتمدة ومتطورة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab2_bullet2">متابعة دورية وتقارير مستوى للوالدين</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab2_bullet3">تقنيات تدريس تفاعلية حديثة داخل الفصول</span></li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 dark:bg-slate-700 shadow-inner">
+                    <div class="rounded-xl overflow-hidden h-64 bg-slate-100 dark:bg-navy-700">
                         <img src="images/speech.jpg" alt="Primary Education" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'">
                     </div>
                 </div>
@@ -422,18 +415,18 @@
                 <!-- Tab 3: Middle School -->
                 <div id="tab-behavior" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <span class="bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-400 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab3_tag">تطوير القدرات</span>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tab3_heading">المرحلة الإعدادية (الصفوف 7 - 9)</h3>
+                        <span class="bg-navy-100 dark:bg-navy-700 text-navy-900 dark:text-gold-300 text-xs font-bold px-3 py-1 rounded" data-i18n="tab3_tag">تطوير القدرات</span>
+                        <h3 class="text-2xl font-bold text-navy-900 dark:text-white" data-i18n="tab3_heading">المرحلة الإعدادية (الصفوف 7 - 9)</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="tab3_desc">
                             تعزيز التفكير النقدي والمهارات العلمية والتقنية، وإعداد الطلاب للمرحلة الثانوية بتميز وتفوق في جميع المواد الأساسية.
                         </p>
                         <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab3_bullet1">مختبرات علوم وحاسوب مجهزة بالكامل</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab3_bullet2">أنشطة ثقافية وعلمية ومسابقات منهجية</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab3_bullet3">إرشاد أكاديمي وتربوي لمتابعة الطلاب</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab3_bullet1">مختبرات علوم وحاسوب مجهزة بالكامل</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab3_bullet2">أنشطة ثقافية وعلمية ومسابقات منهجية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab3_bullet3">إرشاد أكاديمي وتربوي لمتابعة الطلاب</span></li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 dark:bg-slate-700 shadow-inner">
+                    <div class="rounded-xl overflow-hidden h-64 bg-slate-100 dark:bg-navy-700">
                         <img src="images/behavior.jpg" alt="Middle School" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80'">
                     </div>
                 </div>
@@ -441,18 +434,18 @@
                 <!-- Tab 4: High School -->
                 <div id="tab-motor" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <span class="bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-300 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab4_tag">التميز والنجاح</span>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tab4_heading">المرحلة الثانوية (علمي / أدبي)</h3>
+                        <span class="bg-gold-100 text-gold-800 text-xs font-bold px-3 py-1 rounded" data-i18n="tab4_tag">التميز والنجاح</span>
+                        <h3 class="text-2xl font-bold text-navy-900 dark:text-white" data-i18n="tab4_heading">المرحلة الثانوية (علمي / أدبي)</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="tab4_desc">
                             إعداد الطلاب وتأهيلهم للشهادة الثانوية والقبول الجامعي بخطط دراسية مكثفة وكادر تعليمي من كبار الأساذة في ليبيا.
                         </p>
                         <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab4_bullet1">مراجعات واختبارات تجريبية دورية</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab4_bullet2">تأهيل للجامعات والتخصصات المستقبلية</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab4_bullet3">دعم وأنشطة قيادية وصقل المهارات</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab4_bullet1">مراجعات واختبارات تجريبية دورية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab4_bullet2">تأهيل للجامعات والتخصصات المستقبلية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab4_bullet3">دعم وأنشطة قيادية وصقل المهارات</span></li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 dark:bg-slate-700 shadow-inner">
+                    <div class="rounded-xl overflow-hidden h-64 bg-slate-100 dark:bg-navy-700">
                         <img src="images/motor.jpg" alt="High School" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80'">
                     </div>
                 </div>
@@ -460,18 +453,18 @@
                 <!-- Tab 5: Activities & Labs -->
                 <div id="tab-lifeskills" class="tab-content hidden grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-400 text-xs font-bold px-3 py-1 rounded-full" data-i18n="tab5_tag">مهارات إضافية</span>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tab5_heading">المختبرات والأنشطة اللاصفية</h3>
+                        <span class="bg-navy-100 dark:bg-navy-700 text-navy-900 dark:text-gold-300 text-xs font-bold px-3 py-1 rounded" data-i18n="tab5_tag">مهارات إضافية</span>
+                        <h3 class="text-2xl font-bold text-navy-900 dark:text-white" data-i18n="tab5_heading">المختبرات والأنشطة اللاصفية</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="tab5_desc">
                             غرس مهارات التكنولوجيا، الحاسوب، الرياضة، واللغات لضمان بناء طالب متميز ومكتمل المهارات القيادية.
                         </p>
                         <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab5_bullet1">معامل حاسوب ولغات حديثة</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab5_bullet2">أنشطة رياضية وفنية ورحلات تعليمية</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600 dark:text-teal-400"></i> <span data-i18n="tab5_bullet3">مسابقات واحتفالات مدرسة دورية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab5_bullet1">معامل حاسوب ولغات حديثة</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab5_bullet2">أنشطة رياضية وفنية ورحلات تعليمية</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-navy-800 dark:text-gold-400"></i> <span data-i18n="tab5_bullet3">مسابقات وااحتفالات مدرسة دورية</span></li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl overflow-hidden h-64 bg-slate-100 dark:bg-slate-700 shadow-inner">
+                    <div class="rounded-xl overflow-hidden h-64 bg-slate-100 dark:bg-navy-700">
                         <img src="images/life-skills.jpg" alt="Labs & Activities" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80'">
                     </div>
                 </div>
@@ -480,27 +473,23 @@
     </section>
 
     <!-- Interactive Tuition & Needs Assessment Calculator -->
-    <section id="calculator" class="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors">
+    <section id="calculator" class="py-16 sm:py-24 bg-white dark:bg-navy-950 transition-colors">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-6 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-teal-800">
-                
-                <!-- Background Accent Glows -->
-                <div class="absolute -top-12 -right-12 w-48 h-48 bg-teal-500/10 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl"></div>
+            <div class="bg-navy-950 rounded-2xl p-6 sm:p-12 text-white border border-navy-800">
 
                 <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="calc_badge">أداة تسجيل تفاعلية</span>
+                    <span class="bg-gold-600 text-white text-xs font-bold px-3 py-1 rounded uppercase" data-i18n="calc_badge">أداة تسجيل تفاعلية</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold mt-3 text-white" data-i18n="calc_title">حاسبة تقدير المرحلة والتسجيل</h2>
                     <p class="text-slate-300 text-sm mt-2" data-i18n="calc_subtitle">اختر عمر طفلك والمرحلة الدراسية للحصول على توصية بالبرنامج والخدمات المتاحة</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <!-- Form Controls -->
-                    <div class="space-y-6 bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                    <div class="space-y-6 bg-navy-900 p-6 rounded-xl border border-navy-800">
                         <!-- Age Group Select -->
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_age">عمر الطالب / الفئة العمرية:</label>
-                            <select id="calcAge" onchange="calculateNeeds()" class="w-full bg-slate-800 text-white rounded-xl p-3 border border-slate-700 focus:outline-none focus:border-teal-500 text-sm">
+                            <label class="block text-sm font-bold mb-2 text-gold-400" data-i18n="calc_label_age">عمر الطالب / الفئة العمرية:</label>
+                            <select id="calcAge" onchange="calculateNeeds()" class="w-full bg-navy-950 text-white rounded-lg p-3 border border-navy-700 focus:outline-none focus:border-gold-500 text-sm">
                                 <option value="early" data-i18n="calc_age_1">رياض الأطفال (3 - 5 سنوات)</option>
                                 <option value="primary" selected data-i18n="calc_age_2">المرحلة الابتدائية (6 - 11 سنة)</option>
                                 <option value="preteen" data-i18n="calc_age_3">المرحلة الإعدادية والثانوية (12 - 17 سنة)</option>
@@ -509,8 +498,8 @@
 
                         <!-- Main Focus Need -->
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_focus">المرحلة أو المجال المطلوب:</label>
-                            <select id="calcFocus" onchange="calculateNeeds()" class="w-full bg-slate-800 text-white rounded-xl p-3 border border-slate-700 focus:outline-none focus:border-teal-500 text-sm">
+                            <label class="block text-sm font-bold mb-2 text-gold-400" data-i18n="calc_label_focus">المرحلة أو المجال المطلوب:</label>
+                            <select id="calcFocus" onchange="calculateNeeds()" class="w-full bg-navy-950 text-white rounded-lg p-3 border border-navy-700 focus:outline-none focus:border-gold-500 text-sm">
                                 <option value="speech" data-i18n="calc_focus_1">المرحلة الابتدائية والتعليم الأساسي</option>
                                 <option value="behavior" data-i18n="calc_focus_2">المرحلة الإعدادية والعلوم والتكنولوجيا</option>
                                 <option value="autism" data-i18n="calc_focus_3">المرحلة الثانوية والتحضير للشهادات</option>
@@ -520,18 +509,18 @@
 
                         <!-- Checkboxes for Additional Support -->
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-teal-200" data-i18n="calc_label_services">خدمات إضافية اختيارية:</label>
+                            <label class="block text-sm font-bold mb-2 text-gold-400" data-i18n="calc_label_services">خدمات إضافية اختيارية:</label>
                             <div class="space-y-2">
                                 <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
-                                    <input type="checkbox" id="srvSpeech" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700" checked>
+                                    <input type="checkbox" id="srvSpeech" onchange="calculateNeeds()" class="w-4 h-4 rounded text-gold-500 bg-navy-950 border-navy-700" checked>
                                     <span data-i18n="calc_srv_1">متابعة وتقوية في المواد الأساسية</span>
                                 </label>
                                 <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
-                                    <input type="checkbox" id="srvMotor" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700" checked>
+                                    <input type="checkbox" id="srvMotor" onchange="calculateNeeds()" class="w-4 h-4 rounded text-gold-500 bg-navy-950 border-navy-700" checked>
                                     <span data-i18n="calc_srv_2">دورة حاسوب ولغات أجنبية</span>
                                 </label>
                                 <label class="flex items-center gap-3 cursor-pointer text-sm text-slate-300">
-                                    <input type="checkbox" id="srvBus" onchange="calculateNeeds()" class="w-4 h-4 rounded text-teal-500 focus:ring-teal-400 bg-slate-800 border-slate-700">
+                                    <input type="checkbox" id="srvBus" onchange="calculateNeeds()" class="w-4 h-4 rounded text-gold-500 bg-navy-950 border-navy-700">
                                     <span data-i18n="calc_srv_3">خدمة المواصلات المدرسية بزوارة وما حولها</span>
                                 </label>
                             </div>
@@ -539,35 +528,35 @@
                     </div>
 
                     <!-- Recommendation Output Card -->
-                    <div class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-6 rounded-2xl shadow-lg border border-teal-100 dark:border-slate-700 flex flex-col justify-between h-full space-y-6 transition-colors">
+                    <div class="bg-white dark:bg-navy-900 text-slate-900 dark:text-white p-6 rounded-xl border border-slate-200 dark:border-navy-700 flex flex-col justify-between h-full space-y-6">
                         <div>
-                            <div class="flex items-center justify-between border-b pb-3 border-slate-100 dark:border-slate-700">
-                                <span class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase" data-i18n="calc_res_badge">البرنامج والتوصية المقترحة</span>
-                                <i class="fa-solid fa-receipt text-amber-500 text-lg"></i>
+                            <div class="flex items-center justify-between border-b pb-3 border-slate-200 dark:border-navy-800">
+                                <span class="text-xs font-bold text-navy-900 dark:text-gold-400 uppercase" data-i18n="calc_res_badge">البرنامج والتوصية المقترحة</span>
+                                <i class="fa-solid fa-receipt text-gold-600 text-lg"></i>
                             </div>
 
                             <div class="mt-4">
-                                <h4 id="calcProgramTitle" class="text-lg font-bold text-slate-900 dark:text-white">برنامج التعليم الأساسي والتأهيل الأكاديمي</h4>
+                                <h4 id="calcProgramTitle" class="text-lg font-bold text-navy-900 dark:text-white">برنامج التعليم الأساسي والتأهيل الأكاديمي</h4>
                                 <p id="calcProgramDesc" class="text-xs text-slate-500 dark:text-slate-400 mt-1">خطة دراسية كاملة وفق المناهج الحديثة مع أنشطة إثرائية.</p>
                             </div>
 
-                            <div class="mt-6 space-y-2 text-sm bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                            <div class="mt-6 space-y-2 text-sm bg-slate-50 dark:bg-navy-950 p-4 rounded-lg border border-slate-200 dark:border-navy-800">
                                 <div class="flex justify-between">
                                     <span class="text-slate-600 dark:text-slate-400" data-i18n="calc_hours_label">الساعات الدراسية الأسبوعية:</span>
-                                    <span id="calcHours" class="font-bold text-slate-900 dark:text-white">25 - 30 ساعة أسبوعياً</span>
+                                    <span id="calcHours" class="font-bold text-navy-900 dark:text-white">25 - 30 ساعة أسبوعياً</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-slate-600 dark:text-slate-400" data-i18n="calc_eval_label">الزيارة والاستفسار:</span>
-                                    <span class="font-bold text-teal-600 dark:text-teal-400" data-i18n="calc_free">مجاني بالكامل</span>
+                                    <span class="font-bold text-gold-600 dark:text-gold-400" data-i18n="calc_free">مجاني بالكامل</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="space-y-3 pt-2">
-                            <a href="#apply" onclick="prefillFormFromCalc()" class="block text-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm" data-i18n="calc_apply_btn">
+                            <a href="#apply" onclick="prefillFormFromCalc()" class="block text-center bg-navy-900 hover:bg-navy-950 text-white font-bold py-3 rounded-lg text-sm transition-all shadow-sm" data-i18n="calc_apply_btn">
                                 اعتمد التوصية وابدأ تقديم الطلب
                             </a>
-                            <p class="text-[11px] text-center text-slate-400 dark:text-slate-500" data-i18n="calc_disclaimer">* القبول النهائي يتم بعد زيارة المدرسة وتثبيت قيد الطالب بمكتب التسجيل بزوارة.</p>
+                            <p class="text-[11px] text-center text-slate-400" data-i18n="calc_disclaimer">* القبول النهائي يتم بعد زيارة المدرسة وتثبيت قيد الطالب بمكتب التسجيل بزوارة.</p>
                         </div>
                     </div>
                 </div>
@@ -577,18 +566,18 @@
     </section>
 
     <!-- Enrollment Form Section -->
-    <section id="apply" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <section id="apply" class="py-16 sm:py-24 bg-slate-100 dark:bg-navy-900 border-t border-slate-200 dark:border-navy-800 transition-colors">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 transition-colors">
+            <div class="bg-white dark:bg-navy-950 rounded-2xl shadow-sm p-8 sm:p-12 border border-slate-200 dark:border-navy-800 transition-colors">
                 <div class="text-center max-w-xl mx-auto mb-10">
-                    <span class="text-teal-600 dark:text-teal-400 font-bold text-sm tracking-wide uppercase" data-i18n="form_badge">انضم لأسرة النواة</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="form_title">نموذج تقديم الطلب والزيارة</h2>
+                    <span class="text-gold-600 dark:text-gold-400 font-extrabold text-sm uppercase tracking-wider" data-i18n="form_badge">انضم لأسرة النواة</span>
+                    <h2 class="text-3xl font-extrabold text-navy-900 dark:text-white mt-1" data-i18n="form_title">نموذج تقديم الطلب والزيارة</h2>
                     <p class="text-slate-600 dark:text-slate-400 text-sm mt-2" data-i18n="form_subtitle">يرجى تعبئة البيانات التالية وستتواصل معكم إدارة المدرسة خلال 24 ساعة لتأكيد موعد الزيارة والتسجيل.</p>
                 </div>
 
                 <!-- Confirmation Alert Box -->
-                <div id="formSuccessAlert" class="hidden mb-6 p-4 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 rounded-2xl flex items-center gap-3 transition-colors">
-                    <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 text-2xl"></i>
+                <div id="formSuccessAlert" class="hidden mb-6 p-4 bg-emerald-50 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-2xl"></i>
                     <div>
                         <p class="font-bold text-sm" data-i18n="alert_success_title">تم إرسال طلبكم بنجاح!</p>
                         <p class="text-xs text-emerald-700 dark:text-emerald-400" data-i18n="alert_success_desc">شكراً لثقتكم بمدرسة النواة بزوارة. سيتم تحويلك إلى الواتساب للتأكيد.</p>
@@ -599,34 +588,34 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Parent Name -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_parent_name">اسم ولي الأمر بالكامل *</label>
-                            <input type="text" id="parentName" required placeholder="مثال: أحمد علي المحمودي" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_parent_name">اسم ولي الأمر بالكامل *</label>
+                            <input type="text" id="parentName" required placeholder="مثال: أحمد علي المحمودي" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm">
                         </div>
 
                         <!-- Phone Number -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_phone">رقم الهاتف / الواتساب *</label>
-                            <input type="tel" id="phone" required placeholder="091XXXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm" dir="ltr">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_phone">رقم الهاتف / الواتساب *</label>
+                            <input type="tel" id="phone" required placeholder="091XXXXXXX" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm" dir="ltr">
                         </div>
 
                         <!-- Child Name -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_child_name">اسم الطالب الثلاثي *</label>
-                            <input type="text" id="childName" required placeholder="اسم الطالب" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_child_name">اسم الطالب الثلاثي *</label>
+                            <input type="text" id="childName" required placeholder="اسم الطالب" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm">
                         </div>
 
                         <!-- Child Age -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_child_age">عمر الطالب (بالسنوات) *</label>
-                            <input type="number" id="childAge" min="3" max="18" required placeholder="مثال: 8" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_child_age">عمر الطالب (بالسنوات) *</label>
+                            <input type="number" id="childAge" min="3" max="18" required placeholder="مثال: 8" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Service Needed -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_service">المرحلة أو الخدمة المطلوبة *</label>
-                            <select id="formServiceSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_service">المرحلة أو الخدمة المطلوبة *</label>
+                            <select id="formServiceSelect" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm">
                                 <option value="" data-i18n="opt_select">-- اختر المرحلة --</option>
                                 <option value="kg" data-i18n="opt_1">رياض الأطفال والتمهيدي</option>
                                 <option value="primary" data-i18n="opt_2">المرحلة الابتدائية (التعليم الأساسي)</option>
@@ -638,20 +627,20 @@
 
                         <!-- Preferred Visit Date -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_date">التاريخ المفضل للزيارة والمقابلة</label>
-                            <input type="date" id="visitDate" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_date">التاريخ المفضل للزيارة والمقابلة</label>
+                            <input type="date" id="visitDate" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm">
                         </div>
                     </div>
 
                     <!-- Notes -->
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_notes">ملاحظات أو تفاصيل إضافية حول الطالب</label>
-                        <textarea id="notes" rows="3" placeholder="اذكر أي استفسار أو ملاحظة تود إطلاع إدارة التسجيل عليها..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-sm"></textarea>
+                        <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="lbl_notes">ملاحظات أو تفاصيل إضافية حول الطالب</label>
+                        <textarea id="notes" rows="3" placeholder="اذكر أي استفسار أو ملاحظة تود إطلاع إدارة التسجيل عليها..." class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-navy-800 outline-none text-sm"></textarea>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-600/20 text-base transition-all hover:scale-[1.01]">
-                        <i class="fa-solid fa-paper-plane me-2"></i>
+                    <button type="submit" class="w-full bg-navy-900 hover:bg-navy-950 text-white font-bold py-4 rounded-lg shadow-sm text-base transition-all">
+                        <i class="fa-solid fa-paper-plane me-2 text-gold-400"></i>
                         <span data-i18n="btn_submit">إرسال طلب التقييم والزيارة</span>
                     </button>
                 </form>
@@ -660,70 +649,70 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors">
+    <section id="testimonials" class="py-16 sm:py-24 bg-white dark:bg-navy-950 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-600 dark:text-teal-400 font-bold text-sm tracking-wide uppercase" data-i18n="test_badge">ثقة أولياء الأمور</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2" data-i18n="test_title">ماذا يقول أولياء الأمور عنا؟</h2>
-                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+                <span class="text-gold-600 dark:text-gold-400 font-extrabold text-sm uppercase tracking-wider" data-i18n="test_badge">ثقة أولياء الأمور</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mt-2" data-i18n="test_title">ماذا يقول أولياء الأمور عنا؟</h2>
+                <div class="w-12 h-1 bg-navy-900 dark:bg-gold-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Review 1 -->
-                <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 dark:text-teal-900 absolute top-6 end-6"></i>
+                <div class="bg-slate-50 dark:bg-navy-900 p-8 rounded-2xl border border-slate-200 dark:border-navy-800 flex flex-col justify-between relative">
+                    <i class="fa-solid fa-quote-right text-3xl text-navy-200 dark:text-navy-800 absolute top-6 end-6"></i>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-400 gap-1 text-sm">
+                        <div class="flex text-gold-500 gap-1 text-sm">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed" data-i18n="review1_text">
                             "مدرسة النواة من أفضل المدارس الخاصة في زوارة، اهتمام ممتاز بمستوى الطلاب الأكاديمي والأخلاقي. شكراً لإدارة المدرسة والمعلمين!"
                         </p>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-700 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm">أ.م</div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 dark:border-navy-800 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-navy-900 text-gold-400 rounded-full flex items-center justify-center font-bold text-sm">أ.م</div>
                         <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="review1_author">أم محمد</h4>
+                            <h4 class="font-bold text-navy-900 dark:text-white text-sm" data-i18n="review1_author">أم محمد</h4>
                             <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="review1_role">ولي أمر طالب بمرحلة التعليم الأساسي</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 dark:text-teal-900 absolute top-6 end-6"></i>
+                <div class="bg-slate-50 dark:bg-navy-900 p-8 rounded-2xl border border-slate-200 dark:border-navy-800 flex flex-col justify-between relative">
+                    <i class="fa-solid fa-quote-right text-3xl text-navy-200 dark:text-navy-800 absolute top-6 end-6"></i>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-400 gap-1 text-sm">
+                        <div class="flex text-gold-500 gap-1 text-sm">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed" data-i18n="review2_text">
                             "المناهج والمختبرات والمتابعة المستمرة مع أولياء الأمور ممتازة جداً. أبنائنا يشعرون بالراحة والحافز للتعلم والتميز يومياً."
                         </p>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-700 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold text-sm">ع.ز</div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 dark:border-navy-800 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gold-600 text-white rounded-full flex items-center justify-center font-bold text-sm">ع.ز</div>
                         <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="review2_author">أبو سارة</h4>
+                            <h4 class="font-bold text-navy-900 dark:text-white text-sm" data-i18n="review2_author">أبو سارة</h4>
                             <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="review2_role">ولي أمر طالب بالمرحلة الإعدادية</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fa-solid fa-quote-right text-4xl text-teal-200 dark:text-teal-900 absolute top-6 end-6"></i>
+                <div class="bg-slate-50 dark:bg-navy-900 p-8 rounded-2xl border border-slate-200 dark:border-navy-800 flex flex-col justify-between relative">
+                    <i class="fa-solid fa-quote-right text-3xl text-navy-200 dark:text-navy-800 absolute top-6 end-6"></i>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-400 gap-1 text-sm">
+                        <div class="flex text-gold-500 gap-1 text-sm">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed" data-i18n="review3_text">
                             "تغير مستوى ابني في العلوم واللغات بشكل ملحوظ بفضل الكادر التعليمي المتميز والأنشطة الإثرائية التي تقدمها مدرسة النواة."
                         </p>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-700 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm">ف.ط</div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 dark:border-navy-800 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-navy-800 text-gold-400 rounded-full flex items-center justify-center font-bold text-sm">ف.ط</div>
                         <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="review3_author">السيدة فاطمة</h4>
+                            <h4 class="font-bold text-navy-900 dark:text-white text-sm" data-i18n="review3_author">السيدة فاطمة</h4>
                             <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="review3_role">ولي أمر طالب بالمرحلة الثانوية</p>
                         </div>
                     </div>
@@ -733,22 +722,22 @@
     </section>
 
     <!-- Contact & Map Section -->
-    <section id="contact" class="py-16 sm:py-24 bg-slate-900 text-white">
+    <section id="contact" class="py-16 sm:py-24 bg-navy-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Contact Info -->
                 <div class="lg:col-span-5 space-y-8">
                     <div>
-                        <span class="text-amber-400 font-bold text-sm uppercase tracking-wider" data-i18n="contact_badge">موقعنا والتواصل</span>
+                        <span class="text-gold-400 font-extrabold text-sm uppercase tracking-wider" data-i18n="contact_badge">موقعنا والتواصل</span>
                         <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 text-white" data-i18n="contact_title">يسعدنا استقبالكم وزيارتكم</h2>
-                        <p class="text-slate-400 text-sm mt-3" data-i18n="contact_desc">نرحب بزيارتكم للمدرسة بمدينة زوارة للاطلاع على الفصول والمفقات ومقابلة الكادر التعليمي.</p>
+                        <p class="text-slate-300 text-sm mt-3" data-i18n="contact_desc">نرحب بزيارتكم للمدرسة بمدينة زوارة للاطلاع على الفصول والمرافق ومقابلة الكادر التعليمي.</p>
                     </div>
 
                     <div class="space-y-6 text-sm">
                         <!-- Address -->
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-teal-800/80 rounded-2xl flex items-center justify-center text-teal-300 text-xl shrink-0">
+                            <div class="w-11 h-11 bg-navy-900 rounded-xl flex items-center justify-center text-gold-400 text-lg shrink-0 border border-navy-800">
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </div>
                             <div>
@@ -759,7 +748,7 @@
 
                         <!-- Phone -->
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-500/20 rounded-2xl flex items-center justify-center text-amber-400 text-xl shrink-0">
+                            <div class="w-11 h-11 bg-navy-900 rounded-xl flex items-center justify-center text-gold-400 text-lg shrink-0 border border-navy-800">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
@@ -770,7 +759,7 @@
 
                         <!-- Working Hours -->
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-sky-500/20 rounded-2xl flex items-center justify-center text-sky-400 text-xl shrink-0">
+                            <div class="w-11 h-11 bg-navy-900 rounded-xl flex items-center justify-center text-gold-400 text-lg shrink-0 border border-navy-800">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
                             <div>
@@ -782,11 +771,11 @@
 
                     <!-- Action Buttons -->
                     <div class="flex flex-wrap gap-3 pt-4">
-                        <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all shadow-md">
-                            <i class="fa-solid fa-location-arrow"></i>
+                        <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all border border-navy-700">
+                            <i class="fa-solid fa-location-arrow text-gold-400"></i>
                             <span data-i18n="btn_maps">فتح في خرائط Google</span>
                         </a>
-                        <a href="https://wa.me/218914022290" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all shadow-md">
+                        <a href="https://wa.me/218914022290" target="_blank" class="flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all">
                             <i class="fa-brands fa-whatsapp"></i>
                             <span data-i18n="btn_whatsapp">مراسلة عبر الواتساب</span>
                         </a>
@@ -795,27 +784,24 @@
 
                 <!-- Interactive Location Map Card -->
                 <div class="lg:col-span-7">
-                    <div class="bg-slate-800 rounded-3xl p-4 border border-slate-700 shadow-2xl relative overflow-hidden">
-                        <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-900 flex flex-col justify-between p-6">
-                            <!-- Simulated Map Design -->
-                            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                            
+                    <div class="bg-navy-900 rounded-2xl p-4 border border-navy-800 shadow-lg relative overflow-hidden">
+                        <div class="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden bg-navy-950 flex flex-col justify-between p-6 border border-navy-800">
                             <div class="relative z-10 flex justify-between items-start">
-                                <span class="bg-slate-900/90 backdrop-blur-md text-teal-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-teal-500/30 flex items-center gap-2">
-                                    <i class="fa-solid fa-compass spin"></i> W3W3+Q33, Zuwara, Libya
+                                <span class="bg-navy-900 text-gold-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-navy-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-compass"></i> W3W3+Q33, Zuwara, Libya
                                 </span>
                             </div>
 
                             <div class="relative z-10 my-auto text-center space-y-3">
-                                <div class="w-16 h-16 bg-teal-600/90 text-amber-300 rounded-full flex items-center justify-center text-2xl mx-auto shadow-lg shadow-teal-500/50 animate-bounce">
+                                <div class="w-16 h-16 bg-navy-800 border border-gold-500/40 text-gold-400 rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
                                     <i class="fa-solid fa-school"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-white" data-i18n="map_card_title">مدرسة النواة الخاصة للتعليم الأساسي والثانوي</h3>
+                                <h3 class="text-xl font-extrabold text-white" data-i18n="map_card_title">مدرسة النواة الخاصة للتعليم الأساسي والثانوي</h3>
                                 <p class="text-xs text-slate-300" data-i18n="map_card_sub">زوارة - طريق سيدي سعيد بالقرب من مسجد النور</p>
                             </div>
 
                             <div class="relative z-10 flex justify-center">
-                                <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-6 py-2.5 rounded-xl shadow-lg transition-transform hover:scale-105" data-i18n="map_btn">
+                                <a href="https://maps.google.com/?q=W3W3%2BQ33,+Zuwara" target="_blank" class="bg-gold-600 hover:bg-gold-700 text-white text-xs font-bold px-6 py-2.5 rounded-lg shadow-sm" data-i18n="map_btn">
                                     احصل على اتجاهات الطريق
                                 </a>
                             </div>
@@ -828,30 +814,30 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 text-xs py-8 border-t border-slate-800">
+    <footer class="bg-black text-slate-400 text-xs py-8 border-t border-navy-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-start">
             <div>
                 <p class="font-semibold text-slate-300" data-i18n="footer_copy">© 2026 مدرسة النواة الخاصة للتعليم الأساسي والثانوي - زوارة، ليبيا. جميع الحقوق محفوظة.</p>
                 <p class="text-slate-500 text-[11px] mt-1" data-i18n="footer_sub">متخصصون في التعليم الأساسي والإعدادي والثانوي ورياض الأطفال.</p>
             </div>
             <div class="flex gap-4 text-base text-slate-300">
-                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/218914022290" class="hover:text-teal-400"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="hover:text-gold-400"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-gold-400"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/218914022290" class="hover:text-gold-400"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
 
         <!-- Credits Bar -->
-        <div class="border-t border-slate-800 mt-6 pt-4">
+        <div class="border-t border-navy-900 mt-6 pt-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-center">
                 <div class="flex items-center gap-2 text-slate-500 text-[11px]">
-                    <i class="fa-solid fa-school text-teal-700"></i>
+                    <i class="fa-solid fa-school text-gold-500"></i>
                     <span>مدير المدرسة: <span class="text-slate-300 font-semibold">مفيد رجب بكة</span></span>
                 </div>
                 <div class="flex items-center gap-2 text-slate-500 text-[11px]">
-                    <i class="fa-solid fa-code text-amber-600"></i>
+                    <i class="fa-solid fa-code text-gold-500"></i>
                     <span>تصميم وبرمجة: <span class="text-slate-300 font-semibold">وسيم مفيد بكة</span></span>
-                    <span class="text-slate-700">|</span>
+                    <span class="text-navy-800">|</span>
                     <span class="text-slate-600">جميع حقوق التصميم محفوظة © 2026</span>
                 </div>
             </div>
@@ -873,7 +859,7 @@
                 nav_contact: "التواصل والموقع",
                 nav_apply: "تقديم طلب تسجيل",
                 hero_badge: "بيئة تعليمية وتربوية حديثة ومتكاملة لأبنائنا بزوارت",
-                hero_title: 'تعليم متميز يبني العقول، ونستثمر في <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">مستقبل أبنائنا</span>',
+                hero_title: 'تعليم متميز يبني العقول، ونستثمر في <span class="text-navy-700 dark:text-gold-400 underline underline-offset-8 decoration-gold-500">مستقبل أبنائنا</span>',
                 hero_desc: "في مدرسة النواة الخاصة بزوارت، نقدم منهاجاً تعليمياً متطوراً يجمع بين الكفاءة الأكاديمية، والتربية القويمة، والأنشطة الإثرائية في مختلف المراحل الدراسية.",
                 hero_cta_apply: "قدم طلب تسجيل الآن",
                 hero_cta_tour: "احجز زيارة للمدرسة",
@@ -933,7 +919,7 @@
                 tab5_desc: "غرس مهارات التكنولوجيا، الحاسوب، الرياضة، واللغات لضمان بناء طالب متميز ومكتمل المهارات القيادية.",
                 tab5_bullet1: "معامل حاسوب ولغات حديثة",
                 tab5_bullet2: "أنشطة رياضية وفنية ورحلات تعليمية",
-                tab5_bullet3: "مسابقات وااحتفالات مدرسة دورية",
+                tab5_bullet3: "مسابقات واحتفالات مدرسة دورية",
                 calc_badge: "أداة تسجيل تفاعلية",
                 calc_title: "حاسبة تقدير المرحلة والتسجيل",
                 calc_subtitle: "اختر عمر طفلك والمرحلة الدراسية للحصول على توصية بالبرنامج والخدمات المتاحة",
@@ -1014,7 +1000,7 @@
                 nav_contact: "Contact & Location",
                 nav_apply: "Enroll Now",
                 hero_badge: "Modern & Comprehensive Educational Environment in Zuwara",
-                hero_title: 'Inspiring Minds, Investing in <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">Our Children’s Future</span>',
+                hero_title: 'Inspiring Minds, Investing in <span class="text-navy-700 dark:text-gold-400 underline underline-offset-8 decoration-gold-500">Our Children’s Future</span>',
                 hero_desc: "At Al-Nawat Private School in Zuwara, we deliver modern educational curricula combining academic excellence, character building, and extracurricular activities across all stages.",
                 hero_cta_apply: "Apply for Admission",
                 hero_cta_tour: "Book a Campus Visit",
@@ -1197,15 +1183,15 @@
             });
 
             document.querySelectorAll('.program-tab').forEach(btn => {
-                btn.classList.remove('bg-teal-600', 'text-white', 'shadow-md');
-                btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                btn.classList.remove('bg-navy-900', 'text-white');
+                btn.classList.add('bg-white', 'dark:bg-navy-800', 'text-slate-700', 'dark:text-slate-300');
             });
 
             document.getElementById(tabId).classList.remove('hidden');
 
             const activeBtn = document.getElementById('btn-' + tabId);
-            activeBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-            activeBtn.classList.add('bg-teal-600', 'text-white', 'shadow-md');
+            activeBtn.classList.remove('bg-white', 'dark:bg-navy-800', 'text-slate-700', 'dark:text-slate-300');
+            activeBtn.classList.add('bg-navy-900', 'text-white');
         }
 
         // Needs Calculator Logic
